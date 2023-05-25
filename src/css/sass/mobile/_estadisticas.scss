@@ -1,0 +1,2426 @@
+#sideEstadisticas-mobile {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: visibility 0s .6s;
+
+  & .stats-container {
+      position: relative;
+      background-image: url('https://res.cloudinary.com/admsys-storage/image/upload/f_auto,q_auto:best/smarteducation/masterbrain/civicamente-v2/perfil/cabecera.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(#2B2E2E, .9);
+          overflow: hidden;
+          text-align: center;
+          z-index: 0;
+          top: 0;
+          left: 0;
+      }
+
+      // &>* {
+      //     z-index: 100;
+      // }
+
+      .user-stats{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #DFE6E9;
+          font-size: 1rem;
+          line-height: 0.8rem;
+          min-height: 3.5rem;
+          margin: 0 .6rem;
+
+          & h5{
+              font-size: 1.8rem;
+              line-height: 2.4rem;
+              margin: 0;
+              letter-spacing: 0;
+              text-align: left;
+              text-shadow: 0 1px 0 rgba(0,0,0,0.20);
+              margin-bottom:-.3rem;
+          }
+          & span{
+
+              letter-spacing: 0;
+              text-align: left;
+              text-transform: uppercase;
+          }
+
+          & .stat-icon{
+              font-size: 1.8rem;
+              margin-right: .6rem
+          }
+
+          &.stat-points{
+              transform: scale(1.1);
+          }
+
+          &.stats-scale{
+              font-size: .7rem;
+
+              & h5{
+                  font-size: 1.6rem;
+                  line-height: 2rem;
+              }
+
+              & .stat-icon{
+                  transform: scale(0.8);
+              }
+          }
+
+          &.stat-nota{
+              color: #FFEAA7;
+              span, h5{
+                  color: inherit;
+              }
+          }
+
+          &.stat-duelos{
+              color: #B8E986;
+              span, h5{
+                  color: inherit;
+              }
+          }
+      }
+
+      .puntaje {
+          position: absolute;
+          right: 0;
+          text-align: right;
+          padding: 8px;
+
+          svg {
+              font-size: 22px;
+              color: white;
+              margin-right: 9px;
+          }
+
+          span {
+              color: white;
+              font-size: 10px;
+
+              strong {
+                  font-size: 22px;
+                  color: white;
+              }
+          }
+      }
+
+      .user-avatar {
+        border-radius: 50%;
+        background-color: white;
+        // width: 7.5rem;
+        // height: 7.5rem;
+        position: absolute;
+        bottom: inherit;
+        top: -6.5rem;
+        left: 1rem;
+
+          & .img-avatar {
+              padding: .8rem;
+              border-radius: 50%;
+
+              img {
+                  width: 100px;
+              }
+          }
+
+          & .btn-change-avatar {
+              width: 5rem;
+              height: 5rem;
+              font-size: .8rem;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              & .icon-change{
+                  font-size:2.2rem
+              }
+          }
+      }
+
+      div.avatar {
+          position: absolute;
+          bottom: inherit;
+          top: 0;
+          left: 5%;
+          border-radius: 50%;
+          background-color: white;
+          border: 1px solid white;
+          z-index: 2;
+
+          .cambiarAvatar {
+              position: absolute;
+              bottom: -10px;
+              right: 0;
+              width: 40px;
+          }
+
+          .img-rounded {
+              width: 90px;
+              padding: 7px;
+          }
+      }
+
+      div.reemplazarCabecera {
+          position: absolute;
+          right: 1%;
+          bottom: 37%;
+          background-image: linear-gradient(135deg, rgba(237, 240, 246, 0.8) 0%, rgba(201, 214, 232, 0.8) 100%);
+          border-radius: 5px;
+          padding: 2px 5px;
+          width: 140;
+          height: 35px;
+
+          i {
+              background: #5E77E8;
+              border-radius: 50%;
+              font-size: 12px;
+              color: #A8B6EE;
+              letter-spacing: 0;
+              text-align: center;
+              line-height: 14px;
+              padding: 6px;
+              margin-right: 6px;
+          }
+
+          svg {
+              background: #5E77E8;
+              border-radius: 50%;
+              font-size: 12px;
+              color: #A8B6EE;
+              letter-spacing: 0;
+              text-align: center;
+              line-height: 14px;
+              padding: 6px;
+              margin-right: 6px;
+          }
+
+          p {
+
+              font-size: 10px;
+              color: #30336B;
+              letter-spacing: 0;
+              text-align: left;
+              line-height: 11px;
+              text-transform: uppercase;
+              padding-right: 5px;
+              margin: 0
+          }
+      }
+  }
+  div.contenidoEstadisticas {
+    height: calc(100vh - 140px);
+    background-color: #E9E9E9;
+    padding-top: 20px;
+    .boxWaiting{
+      display: block;
+      height: 180px;
+      width: 100%;
+    }
+    .waiting-box:before {
+      content: "";
+      display: block;
+      background: url(https://res.cloudinary.com/admsys-storage/image/upload/smarteducation/masterbrain/civicamente-resources/svg/isotipo-move.svg);
+      background-color: rgba(0, 0, 0, 0.05);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 70px;
+      /* position: fixed; */
+      width: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 99999999999;
+    }
+    h3 {
+
+      font-size: 20px;
+      color: #4A4A4A;
+      letter-spacing: 0;
+      text-align: left;
+      text-shadow: 0 1px 0 #FFFFFF;
+    }
+    nav {
+      .nav.nav-tabs {
+        border: unset;
+        padding: 0 0 0 35px;
+        a {
+          position: relative;
+
+          font-size: 16px;
+          line-height: 16px;
+          color: #4A4A4A;
+          letter-spacing: 0;
+          text-align: center;
+          margin: unset;
+          border: unset;
+          // padding: 0.5rem 15px;
+          padding: .75rem 15px;
+          &.active {
+            color: #4B61E6;
+            background: #FFFFFF;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            &:before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: -10px;
+              width: 10px;
+              height: 20px;
+              background-color: #E9E9E9;
+              border-bottom-right-radius: 15px;
+              z-index: 3;
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              right: -10px;
+              width: 10px;
+              height: 20px;
+              background-color: #E9E9E9;
+              border-bottom-left-radius: 15px;
+              z-index: 3;
+            }
+            &:hover {
+              border-color: unset
+            }
+            div.activeNavLink {
+              &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: -10px;
+                width: 10px;
+                height: 20px;
+                background-color: white;
+                z-index: 2;
+              }
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: -10px;
+                width: 10px;
+                height: 20px;
+                background-color: white;
+                z-index: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+    div#nav-tabContent {
+      background-color: white;
+      border-radius: 4px;
+      .sinInformacion{
+        display: block;
+          h6{
+            width: 100%;
+            text-align: left;
+            padding: 20px 5px 0px 5px;
+          }
+      }
+      .tab-pane {
+        // height: 80% !important;
+        // overflow-y: auto;
+        table {
+          width: 98%;
+          margin: auto;
+          thead {
+            background: #32323F;
+            border-radius: 5px;
+            th {
+              border: 0;
+              vertical-align: middle;
+
+              font-size: 14px;
+              color: #EEF3F7;
+              letter-spacing: 0;
+              line-height: 14px;
+              &:first-of-type {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+              }
+              &:last-of-type {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+              }
+            }
+          }
+          tbody {
+            &:before {
+              content:"@";
+              display:block;
+              line-height:10px;
+              text-indent:-99999px;
+            }
+            tr:nth-of-type(odd) {
+              background: #EEF3F7;
+              border-radius: 5px;
+            }
+            tr {
+              th, td {
+
+                font-size: 14px;
+                color: #4A4A4A;
+                text-align: left;
+                line-height: 15px;
+                vertical-align: middle;
+                button {
+                  padding: 10px 4px;
+                }
+              }
+              th.tipo {
+                position: relative;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                span {
+                  width: 80%;
+                }
+                div.infoDuelo {
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  height: 100%;
+                  width: 20%;
+                  div.participantes {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 50%;
+                    img {
+                      position: absolute;
+                      top: 50%;
+                      transform: translate(-50%, -50%);
+                      width: 30px;
+                      z-index: 1;
+                      &:nth-child(1) {
+                        left: 30%;
+                      }
+                      &:nth-child(2) {
+                        left: 70%;
+                      }
+                      &.ganador {
+                        z-index: 2;
+                      }
+                    }
+                  }
+                  div.resultado {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 50%;
+                    img{
+                      width: 28px;
+                      margin-left: 10px;
+                    }
+                    div {
+                      position: absolute;
+                      top: 50%;
+                      left: 50%;
+                      transform: translate(-50%, -50%);
+                      background: #EB4D4B;
+                      height: 26px;
+                      width: 26px;
+                      border-radius: 50%;
+                      color: white;
+                      i {
+                        position: absolute;
+                        top: 55%;
+                        left: 54%;
+                        transform: translate(-50%, -50%) scaleX(-1);
+                      }
+                      svg {
+                        position: absolute;
+                        top: 55%;
+                        left: 54%;
+                        transform: translate(-50%, -50%) scaleX(-1);
+                      }
+                    }
+                  }
+                }
+              }
+              td.respuestasCorrectas {
+                div.progress {
+                  height: 7.5px;
+                  background: #C3CDD1;
+                  border-radius: 10px;
+                  div.progress-bar {
+                    background-image: linear-gradient(134deg, #4B61E6 0%, #7E41EF 100%);
+                    border-radius: 10px;
+                  }
+                }
+                span {
+                  display: block;
+                  margin-top: 5px;
+                }
+              }
+              td:last-of-type {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+    div.verMas {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10%;
+      text-align: center;
+      margin: 0;
+      background: rgb(255,255,255);
+      background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    ul.pagination {
+      background: #ffffff;
+      border-radius: 0;
+      padding: 12px;
+      margin: 0;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      text-align: center;
+      margin: 0 auto;
+      li.page-item {
+        margin-right: 5px;
+        &:last-of-type {
+          margin: 0;
+        }
+      }
+    }
+  }
+  div.informacionCuenta {
+    position: relative;
+    background: url('https://res.cloudinary.com/admsys-storage/image/upload/f_auto,q_auto:best/smarteducation/masterbrain/civicamente-v2/estadistica/bg-confetti.svg');
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    #mainContent-mobile {
+      display: none;
+    }
+    .scrol{
+      padding-bottom: 15px;
+      height: 240px;
+      position: relative;
+      div.botonVerMas {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        height: 45px;
+        background: #ffeaa7;
+        background: linear-gradient(180deg, rgba(#ffffff, 0) 0%, #ffffff 50%);
+        width: 100%;
+        button {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: calc(75% - 10rem);
+        }
+      }
+    }
+    .scrol-ranking-nacional{
+      padding-bottom: 15px;
+      height: 270px;
+      position: relative;
+      div.botonVerMas {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        height: 45px;
+        background: #ffeaa7;
+        background: linear-gradient(180deg, rgba(#ffffff, 0) 0%, #ffffff 50%);
+        width: 100%;
+        button {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+           width: calc(75% - 10rem);
+        }
+      }
+    }
+    div.interno {
+      padding: 0;
+      margin-bottom: 65px;
+      .card.rankingCurso {
+        .card-body {
+          padding: 3rem 2rem;
+
+          hr {
+            margin-top: .25rem;
+            margin-bottom: .25rem;
+          }
+          p {
+
+
+            color: #4A4A4A;
+            letter-spacing: 0;
+            text-align: left;
+            margin-bottom: 5px;
+            width: 80%;
+          }
+          .alumnoRanking {
+            position: relative;
+            padding: 10px 0;
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+            .btn-group{
+              width: 100%;
+              text-align: center;
+              width: 100%;
+              margin: 0px;
+            }
+            .block {
+              font-size: 12px;
+              width: 100px;
+              text-align: center;
+              margin-left: 33px;
+            }
+            .listaTrivias{
+              padding: 8px 0px 8px 0px;
+              width: 100%;
+
+              .tituloTrivia{
+
+
+              }
+            }
+            &.active {
+              background: #FFEAA7;
+              border-radius:5px;
+              &:before {
+                content: 'Yo';
+                position: absolute;
+                top: 0;
+                right: 3px;
+
+                font-size: 11px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                text-align: center;
+                z-index: 3;
+              }
+              &:after {
+                content: '';
+                position: absolute;
+                top: -15px;
+                right: -20px;
+                width: 50px;
+                height: 30px;
+                transform: rotate(45deg);
+                background: #EB4D4B;
+                z-index: 2;
+              }
+            }
+            .posicion {
+              width: 10%;
+
+              font-size: 17px;
+              color: #32323F;
+              letter-spacing: 0;
+              text-align: center;
+
+            }
+            .avatar {
+              width: 15%;
+              padding-left: 3px;
+              img {
+                width: 100%;
+              }
+            }
+            .nombre {
+              width: 50%;
+              font-size: 13px;
+              font-weight: 700;
+              color: #32323F;
+              letter-spacing: 0;
+              text-align: left;
+              line-height: 12px;
+              padding: 0 10px;
+              span{
+                position: inherit;
+                font-size: 9px;
+                padding: 3px 7px 2px 7px;
+                display: block;
+                width: 80px;
+                margin-top: 4px;
+              }
+            }
+            .puntaje {
+              width: 25%;
+              background-image: linear-gradient(135deg, #EDF0F6 0%, #C9D6E8 100%);
+              padding: 5px;
+              border-radius: 20px;
+
+              font-size: 10px;
+              color: #32323F;
+              letter-spacing: 0;
+              text-align: center;
+            }
+            .noranking {
+              padding: 0px 15px 0px 15px;
+              text-align: left;
+              font-size: 13px;
+              font-weight: 500 !important;
+            }
+          }
+          .verMas {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            margin: 0;
+            background: rgb(255,255,255);
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+          & > i {
+            position: absolute;
+            top: 3%;
+            right: 3%;
+            color: #4B61E6;
+            font-size: 30px;
+          }
+          & > svg {
+            position: absolute;
+            top: 3%;
+            right: 3%;
+            color: #4B61E6;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+  div#sideResultadosTrivia-mobile {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    .page-content {
+      margin: 0px;
+      padding: 0px;
+    }
+    .tituloResultado{
+      font-size: 22px;
+      color: #4A4A4A;
+      letter-spacing: 0;
+      padding-top: 30px;
+      text-align: center;
+      text-shadow: 0 1px 0 #FFFFFF;
+    }
+    .informacionResultado{
+      display: flex;
+      padding: 0px;
+      border-radius: 0;
+      background: transparent;
+      .correctas{
+        background: white;
+        position: relative;
+        height: 70px;
+        color: black;
+        text-align: center;
+        .detalle{
+          display: block;
+          background: #426df5;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          color: white;
+          font-size: 15px;
+
+          padding: 4px;
+        }
+        .correctasNum{
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding-top: 30px;
+          span{
+
+            font-size: 25px;
+          }
+        }
+      }
+      .erradas{
+        background: white;
+        position: relative;
+        height: 70px;
+        color: black;
+        text-align: center;
+        .detalle{
+          display: block;
+          background: #6d47a0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          color: white;
+          font-size: 15px;
+
+          padding: 4px;
+        }
+        .correctasNum{
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding-top: 30px;
+          span{
+
+            font-size: 25px;
+          }
+        }
+      }
+      .puntaje{
+        background: white;
+        position: relative;
+        height: 70px;
+        color: black;
+        text-align: center;
+        .detalle{
+          display: block;
+          background: #fd44bb;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          color: white;
+          font-size: 15px;
+
+          padding: 4px;
+        }
+        .correctasNum{
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding-top: 30px;
+          span{
+
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .cd-panel__container-mobile {
+        top: 45px !important;
+    }
+    div.cd-panel__content {
+      background: url('https://res.cloudinary.com/admsys-storage/image/upload/f_auto,q_auto:best/smarteducation/masterbrain/civicamente-v2/estadistica/bg-confetti.svg'), #E9E9E9;
+      background-position: center top;
+      background-size: contain;
+      background-repeat: no-repeat;
+      .contenedorPreguntas{
+        padding: 1px;
+        margin-bottom: 50px;
+        .respuestas{
+          margin: 0px;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          p{
+            padding: 0;
+            font-size: 12px;
+
+          }
+        }
+
+        .preguntas{
+          margin: 10px;
+          background: white;
+          border: solid 1px #ccd3da;
+          margin-bottom: 5px;
+          border-radius: 10px;
+          .q-card__section--vert {
+              padding: 0px !important;
+          }
+          .icono{
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+            display: flex;
+
+            img{
+              width: 25px;
+              margin-top: 25px;
+            }
+          }
+          .puntaje{
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+            display: flex;
+            width: 100%;
+            text-align: center;
+            background: #6f49a4;
+
+            p{
+
+              color: white;
+
+            }
+          }
+          .respuestasExpandidas{
+            color: #6f49a4;
+
+            font-size: 15px;
+            padding: 0px !important;
+            margin: 6px 0px 0px 0px;
+          }
+          p{
+            padding: 15px;
+            color: black;
+          }
+        }
+      }
+      h3 {
+        //
+        // font-size: 20px;
+        // color: #4A4A4A;
+        // letter-spacing: 0;
+        // text-align: left;
+        // text-shadow: 0 1px 0 #FFFFFF;
+      }
+      div.infoResultados {
+        background: #FFFFFF;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+        border-radius: 4px;
+        padding: 5px;
+        height: 100%;
+        div.icono {
+          position: relative;
+          width: 49px;
+          height: 46px;
+          background-color: #4B61E6;
+          border-radius: 50%;
+          margin-right: 15px;
+          margin-left: 5px;
+          i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+          }
+          svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 20px;
+          }
+        }
+        div.detalle {
+          width: 80%;
+          span {
+            display: block;
+
+            font-size: 11px;
+            line-height: 13px;
+            color: #4A4A4A;
+            text-align: left;
+          }
+          p {
+            font-size: 12px;
+            color: #32323F;
+            letter-spacing: 0;
+            text-align: left;
+            margin: 0;
+          }
+        }
+      }
+      nav {
+        .nav.nav-tabs {
+          border: unset;
+          padding: 0 15px;
+          a {
+            position: relative;
+
+            font-size: 16px;
+            line-height: 16px;
+            color: #4A4A4A;
+            letter-spacing: 0;
+            text-align: center;
+            margin: unset;
+            border: unset;
+            padding: 0.5rem 15px;
+            &.active {
+              color: #4B61E6;
+              background: #FFFFFF;
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
+              &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: -10px;
+                width: 10px;
+                height: 20px;
+                background-color: #E9E9E9;
+                border-bottom-right-radius: 15px;
+                z-index: 3;
+              }
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: -10px;
+                width: 10px;
+                height: 20px;
+                background-color: #E9E9E9;
+                border-bottom-left-radius: 15px;
+                z-index: 3;
+              }
+              &:hover {
+                border-color: unset
+              }
+              div.activeNavLink {
+                &:before {
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  bottom: 0;
+                  left: -10px;
+                  width: 10px;
+                  height: 20px;
+                  background-color: white;
+                  z-index: 2;
+                }
+                &:after {
+                  content: '';
+                  position: absolute;
+                  bottom: 0;
+                  right: -10px;
+                  width: 10px;
+                  height: 20px;
+                  background-color: white;
+                  z-index: 2;
+                }
+              }
+            }
+          }
+        }
+      }
+      div#nav-tabContent {
+        background-color: white;
+        border-radius: 4px;
+        table {
+          thead {
+            background: #32323F;
+            border-radius: 5px;
+            th {
+              border: 0;
+              vertical-align: middle;
+
+              font-size: 14px;
+              color: #EEF3F7;
+              letter-spacing: 0;
+              line-height: 14px;
+              &:first-of-type {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+              }
+              &:last-of-type {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+              }
+            }
+          }
+          tbody {
+            &:before {
+              content:"@";
+              display:block;
+              line-height:10px;
+              text-indent:-99999px;
+            }
+            tr:nth-of-type(odd) {
+              background: #EEF3F7;
+              border-radius: 5px;
+            }
+            tr {
+              th, td {
+                font-size: 13px;
+                color: #4A4A4A;
+                text-align: left;
+                line-height: 17px;
+                vertical-align: middle;
+                button {
+                  padding: 10px 4px;
+                }
+              }
+              th.pregunta {
+                position: relative;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                span {
+                  display: block;
+                  width: 75%;
+                }
+                div.documentoTrivia {
+                  position: absolute;
+                  top: 50%;
+                  right: 5%;
+                  transform: translate(-50%, -50%);
+                  height: 25px;
+                  width: 27px;
+                  i {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+                  svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+                }
+              }
+              td.resultado {
+                font-size: 20px;
+                &.correcto {
+                  color: #6AB04C;
+                }
+                &.errado {
+                  color: #EB4D4B;
+                }
+              }
+              td.respuestaElegida, td.respuestaCorrecta {
+                font-size: 12px;
+                color: #32323F;
+                text-align: center;
+                font-weight: 700;
+              }
+              td:last-of-type {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#modalTriviaTerminada{
+  display: block;
+  background: url('https://res.cloudinary.com/admsys-storage/image/upload/f_auto,q_auto:best/smarteducation/masterbrain/civicamente-v2/estadistica/bg-confetti.svg'), #E9E9E9;
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin:0px;
+  .tituloResultado{
+    font-size: 22px;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    padding-top: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+  }
+  .informacionResultado{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 0;
+    background: transparent;
+    .correctas{
+      background: white;
+      position: relative;
+      height: 85px;
+      color: black;
+      margin: 5px;
+      text-align: center;
+      .detalle{
+        display: block;
+        background: #426df5;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+
+        padding: 4px;
+      }
+      .correctasNum{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 2.5rem;
+        span{
+
+          font-size: 25px;
+        }
+      }
+    }
+    .erradas{
+      background: white;
+      position: relative;
+      height: 85px;
+      color: black;
+      margin: 5px;
+      text-align: center;
+      .detalle{
+        display: block;
+        background: #6d47a0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+
+        padding: 4px;
+      }
+      .correctasNum{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 2.5rem;
+        span{
+
+          font-size: 25px;
+        }
+      }
+    }
+    .puntaje{
+      background: white;
+      position: relative;
+      height: 85px;
+      margin: 5px;
+      color: black;
+      text-align: center;
+      .detalle{
+        display: block;
+        background: #fd44bb;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+
+        padding: 4px;
+      }
+      .correctasNum{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 2.5rem;
+        span{
+
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .contenedorPreguntas{
+    padding: 1px;
+    margin-bottom: 50px;
+    .respuestas{
+      margin: 0px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      p{
+        padding: 0;
+        font-size: 12px;
+
+      }
+    }
+
+    .preguntas{
+      margin: 10px;
+      background: white;
+      border: solid 1px #ccd3da;
+      margin-bottom: 5px;
+      border-radius: 10px;
+      .q-card__section--vert {
+          padding: 0px !important;
+      }
+      .icono{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        display: flex;
+
+        img{
+          width: 25px;
+          margin-top: 25px;
+        }
+      }
+      .puntaje{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        display: flex;
+        width: 100%;
+        text-align: center;
+        background: #6f49a4;
+
+        p{
+
+          color: white;
+
+        }
+      }
+      .respuestasExpandidas{
+        color: #6f49a4;
+
+        font-size: 15px;
+        padding: 0px !important;
+        margin: 6px 0px 0px 0px;
+      }
+      p{
+        padding: 15px;
+        color: black;
+      }
+    }
+  }
+}
+
+#modalTofTerminada{
+  display: block;
+  background: url('https://res.cloudinary.com/admsys-storage/image/upload/f_auto,q_auto:best/smarteducation/masterbrain/civicamente-v2/estadistica/bg-confetti.svg'), #E9E9E9;
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  .tituloResultado{
+    font-size: 22px;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    padding-top: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+  }
+  .informacionResultado{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 0;
+    background: transparent;
+    .correctas{
+      background: white;
+      position: relative;
+      height: 85px;
+      color: black;
+      margin: 5px;
+      text-align: center;
+      .detalle{
+        display: block;
+        background: #426df5;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+
+        padding: 4px;
+      }
+      .correctasNum{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 2.5rem;
+        span{
+
+          font-size: 25px;
+        }
+      }
+    }
+    .erradas{
+      background: white;
+      position: relative;
+      height: 85px;
+      color: black;
+      margin: 5px;
+      text-align: center;
+      .detalle{
+        display: block;
+        background: #6d47a0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+
+        padding: 4px;
+      }
+      .correctasNum{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 2.5rem;
+        span{
+
+          font-size: 25px;
+        }
+      }
+    }
+    .puntaje{
+      background: white;
+      position: relative;
+      height: 85px;
+      margin: 5px;
+      color: black;
+      text-align: center;
+      .detalle{
+        display: block;
+        background: #fd44bb;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+
+        padding: 4px;
+      }
+      .correctasNum{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 2.5rem;
+        span{
+
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .contenedorPreguntas{
+    padding: 1px;
+    margin-bottom: 50px;
+    .respuestas{
+      margin: 0px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      p{
+        padding: 0;
+        font-size: 12px;
+
+      }
+    }
+
+    .preguntas{
+      margin: 10px;
+      background: white;
+      border: solid 1px #ccd3da;
+      margin-bottom: 5px;
+      border-radius: 10px;
+      .q-card__section--vert {
+          padding: 0px !important;
+      }
+      .icono{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        display: flex;
+
+        img{
+          width: 25px;
+          margin-top: 25px;
+        }
+      }
+      .puntaje{
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        justify-self: center;
+        display: flex;
+        width: 100%;
+        text-align: center;
+        background: #6f49a4;
+
+        p{
+
+          color: white;
+
+        }
+      }
+      .respuestasExpandidas{
+        color: #6f49a4;
+
+        font-size: 15px;
+        padding: 0px !important;
+        margin: 6px 0px 0px 0px;
+      }
+      p{
+        padding: 15px;
+        color: black;
+      }
+    }
+  }
+}
+
+#sideResultadosTrivia-mobile {
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+
+    .resultadoTrivia-duelo {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999999999999999;
+
+      &.dueloGanado {
+          background-image: linear-gradient(134deg, #F75070 0%, #FFE194 100%);
+      }
+
+      &.dueloTerminado {
+          background-image: linear-gradient(134deg, #45d6bb 0%, #52f347 100%);
+      }
+
+      &.dueloPerdido {
+          background-image: linear-gradient(180deg, #B3B9C1 0%, #8F9AA8 99%);
+
+          div.contenedorExterno {
+              div.contenedorInterno {
+                  background-image: unset;
+
+                  h3 {
+                      font-size: 46.4px;
+                      color: #2C2C41;
+                      margin-bottom: 20px;
+                  }
+
+                  h5 {
+                      font-size: 21.4px;
+                      color: #2C2C41;
+                      margin-bottom: 30px;
+                  }
+
+                  h6 {
+
+                      font-size: 24px;
+                      color: #2C2C41;
+                      letter-spacing: 0;
+                      line-height: 22px;
+                      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.50);
+                  }
+
+                  div.card.cardDuelista {
+                      &.ganador {
+                          margin-bottom: 25px;
+                      }
+                  }
+
+                  &>div.row.mb-5.pb-5 {
+                      margin-bottom: 0 !important;
+                      padding-bottom: 0 !important;
+                  }
+
+                  &>div.row>div.col-4.offset-4 {
+                      h6 {
+                          font-size: 24px;
+                          color: #2C2C41;
+                          letter-spacing: 0;
+                          line-height: 22px;
+                          text-shadow: 0 1px 0 rgba(255, 255, 255, 0.50);
+                          margin: 0;
+                          padding: 0;
+                      }
+                  }
+
+                  &>div.row>div.col-4 {
+                      h6 {
+                          font-size: 20px;
+                          color: #2C2C41;
+                          letter-spacing: 0;
+                          line-height: 22px;
+                          text-shadow: 0 1px 0 rgba(255, 255, 255, 0.50);
+                          margin-bottom: 10px;
+                      }
+                  }
+              }
+          }
+      }
+
+      div.contenedorExterno {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 100%;
+          height: 100%;
+          transform: translateX(-50%);
+          background-image: url('https://res.cloudinary.com/dr3zgzxx0/image/upload/f_auto,q_auto/v1599166189/grecia_2_mepvgg.svg');
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center -15%;
+
+          div.contenedorInterno {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              height: fit-content;
+              width: 80%;
+              text-align: center;
+              background-image: url('https://res.cloudinary.com/dr3zgzxx0/image/upload/v1610739071/smart/fondo_duelo_civico_ganador_lrath9.svg');
+              background-size: initial;
+              background-position: center 70%;
+              background-repeat: no-repeat;
+
+              h3 {
+
+                  font-size: 40px;
+                  color: #FFEAA7;
+                  letter-spacing: 0;
+                  text-align: center;
+                  padding-bottom: 10px;
+              }
+
+              h4 {
+
+                  font-size: 22.4px;
+                  color: #32323F;
+                  padding: 10px;
+                  letter-spacing: 0;
+                  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.40);
+
+                  strong {
+                      font-size: 40px;
+                      text-align: center;
+                      display: inline-block;
+                      vertical-align: middle;
+                  }
+
+                  span {
+                      display: inline-block;
+                      vertical-align: middle;
+                      margin-top: -15px;
+                  }
+              }
+
+              h5 {
+
+                  font-size: 25px;
+                  color: #2C2C41;
+                  letter-spacing: 0;
+                  line-height: 22px;
+                  margin-bottom: 5px;
+                  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.40);
+              }
+
+              h6 {
+
+                  font-size: 15px;
+                  color: #2C2C41;
+                  letter-spacing: 0;
+                  line-height: 22px;
+                  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.50);
+                  padding-bottom: 5px;
+              }
+
+              p {
+
+                  font-size: 10.75px;
+                  color: #000000;
+                  letter-spacing: 0;
+                  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.40);
+
+                  strong {
+                      font-size: 35.24px;
+                      text-align: center;
+                      display: inline-block;
+                      vertical-align: middle;
+                  }
+
+                  span {
+                      display: inline-block;
+                      vertical-align: middle;
+                      margin-top: -10px;
+                  }
+              }
+
+              button {
+                  height: 70px;
+                  width: 260px;
+              }
+
+              div.card.cardDuelista {
+                  background-image: linear-gradient(135deg, #EDF0F6 0%, #C9D6E8 100%);
+                  box-shadow: 0 3px 0 0 #B8E986;
+                  border-radius: 4px;
+                  padding: 10px;
+                  max-width: 90%;
+                  min-height: 100px;
+                  margin: auto;
+                  filter: grayscale(1);
+
+                  &.ganador {
+                      filter: unset;
+                      max-width: 300px;
+                      max-height: 170px;
+                      padding: 12px;
+
+                      div.card-img {
+                          border: unset;
+                          position: relative;
+
+                          &:before {
+                              content: '';
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-image: url('https://res.cloudinary.com/dr3zgzxx0/image/upload/v1592414488/laurel_mghbea.svg');
+                              background-size: cover;
+                              background-position: center;
+                              background-repeat: no-repeat
+                          }
+
+                          img {
+                              width: 100%;
+                              border-radius: 50%;
+                          }
+                      }
+
+                      div.card-body {
+                          h6.card-subtitle {
+
+                              line-height: 13.5px;
+                              font-size: 13.5px;
+                              color: #4B61E6;
+                              letter-spacing: 0;
+                          }
+
+                          h5.card-title {
+
+                              letter-spacing: 0;
+                              margin-bottom: 0;
+                              text-transform: uppercase;
+                              font-size: 16px;
+                              line-height: 14px;
+                              color: #32323F;
+                              max-width: 100px;
+                          }
+
+                          p.card-text {
+
+                              line-height: 10px;
+                              font-size: 14px;
+                              color: #54137B;
+                              letter-spacing: 0;
+                              padding: 0px;
+                              margin: 0px;
+                          }
+
+                          div.row div.col.d-flex.align-items-center {
+                              img {
+                                  width: 15px
+                              }
+
+                              p {
+
+                                  line-height: 13.5px;
+                                  color: #32323F;
+                                  letter-spacing: 0;
+                                  padding: 0px;
+                                  font-size: 12.5px;
+                                  margin: 0px;
+                              }
+                          }
+                      }
+
+                      div.identificador {
+                          width: fit-content;
+                          font-size: 13.97px;
+                          line-height: 27px;
+                          color: #FFFFFF;
+                          letter-spacing: 0;
+                          text-align: center;
+                          text-shadow: 0 2px 0 rgba(0, 0, 0, 0.20);
+                          padding-left: 5px;
+                          padding-right: 5px;
+                      }
+                  }
+
+                  &.retadorTerminado {
+                      filter: unset;
+                      max-width: 380px;
+                      max-height: 170px;
+                      padding: 12px;
+
+                      div.card-img {
+                          border: unset;
+                          position: relative;
+
+                          &:before {
+                              content: '';
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-size: cover;
+                              background-position: center;
+                              background-repeat: no-repeat
+                          }
+
+                          img {
+                              width: 100%;
+                          }
+                      }
+
+                      div.card-body {
+                          h6.card-subtitle {
+
+                              line-height: 13.5px;
+                              font-size: 13.5px;
+                              color: #4B61E6;
+                              letter-spacing: 0;
+                          }
+
+                          h5.card-title {
+
+                              color: #32323F;
+                              letter-spacing: 0;
+                              margin-bottom: 0;
+                              text-transform: uppercase;
+                              color: #32323F;
+                              font-size: 15.5px;
+                              line-height: 18px;
+                              max-width: 80px;
+                          }
+
+                          p.card-text {
+
+                              line-height: 20px;
+                              font-size: 19px;
+                              color: #54137B;
+                              letter-spacing: 0;
+                          }
+
+                          div.row div.col.d-flex.align-items-center {
+                              img {
+                                  width: 15px
+                              }
+
+                              p {
+
+                                  line-height: 13.5px;
+                                  color: #32323F;
+                                  letter-spacing: 0;
+                                  padding: 0px;
+                                  margin: 0px;
+                                  font-size: 13.5px;
+                              }
+                          }
+                      }
+
+                      div.identificador {
+                          width: fit-content;
+                          font-size: 13.97px;
+                          line-height: 27px;
+                          color: #FFFFFF;
+                          letter-spacing: 0;
+                          text-align: center;
+                          text-shadow: 0 2px 0 rgba(0, 0, 0, 0.20);
+                          padding-left: 5px;
+                          padding-right: 5px;
+                      }
+                  }
+
+                  div.card-img {
+                      // position: absolute;
+                      // top: 50%;
+                      // left: 60%;
+                      // transform: translate(-50%, -50%);
+                      // width: 100%;
+                      // height: 100%;
+                      border: 3px solid white;
+                      border-radius: 50%;
+
+                      img {
+                          width: 100%
+                      }
+                  }
+
+                  div.card-body {
+                      padding-top: 10px;
+                      padding-right: 5px;
+                      padding-bottom: 0;
+                      padding-left: 10px;
+                      text-align: left;
+
+                      h6.card-subtitle {
+
+                          font-size: 9px;
+                          line-height: 9px;
+                          color: #4B61E6;
+                          letter-spacing: 0;
+                      }
+
+                      h5.card-title {
+
+                          color: #32323F;
+                          letter-spacing: 0;
+                          margin-bottom: 0;
+                          text-transform: uppercase;
+                          font-size: 11px;
+                          line-height: 14px;
+                          color: #32323F;
+                          max-width: 80px;
+                      }
+
+                      p.card-text {
+
+                          font-size: 14px;
+                          line-height: 25px;
+                          color: #54137B;
+                          letter-spacing: 0;
+                      }
+
+                      div.row div.col.d-flex.align-items-center {
+                          img {
+                              width: 10px
+                          }
+
+                          p {
+
+                              font-size: 9px;
+                              line-height: 9px;
+                              color: #32323F;
+                              letter-spacing: 0;
+                              padding: 0px;
+                              margin: 0px;
+                          }
+                      }
+                  }
+
+                  div.identificador {
+                      position: absolute;
+                      top: 0;
+                      right: 5%;
+                      transform: translateY(-50%);
+                      width: 75px;
+                      border-radius: 15px;
+                      text-transform: uppercase;
+                      font-size: 10px;
+                      line-height: 17px;
+
+                      &.usuarioActual {
+                          background-image: linear-gradient(134deg, #4B61E6 0%, #7E41EF 100%);
+
+                          color: #FFFFFF;
+                          letter-spacing: 0;
+                          text-align: center;
+                          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.20);
+                      }
+
+                      &.rival {
+                          background-image: linear-gradient(225deg, #FFD97C 0%, #F6A742 100%);
+
+                          color: #FFFFFF;
+                          letter-spacing: 0;
+                          text-align: center;
+                          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.20);
+                      }
+                  }
+              }
+          }
+
+          div.contenedorInternoTerminado {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              height: fit-content;
+              width: 50%;
+              text-align: center;
+              background-image: none !important;
+              background-size: initial;
+              background-position: center 70%;
+              background-repeat: no-repeat;
+          }
+      }
+
+      &>img {
+          position: absolute;
+          bottom: 0;
+          right: 5%;
+      }
+
+      @media screen and (max-height: 800px) {
+          div.contenedorExterno {
+              div.contenedorInterno {
+                  width: 100%;
+                  background-position: center 50%;
+
+                  &>div.row>div.col>img {
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                  }
+
+                  div.row.mb-5.pb-5 {
+                      padding-bottom: 0 !important;
+                  }
+              }
+          }
+      }
+  }
+
+
+  .page-content {
+    margin: 0px;
+    padding: 0px;
+  }
+  .tituloResultado{
+    font-size: 22px;
+    color: #4A4A4A;
+    letter-spacing: 0;
+    padding-top: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 #FFFFFF;
+  }
+  .informacionResultado{
+    display: flex;
+    padding: 0px;
+    border-radius: 0;
+    background: transparent;
+    .correctas{
+      background: white;
+      position: relative;
+      height: 70px;
+      color: black;
+      text-align: center;
+      .detalle{
+        display: block;
+        background: #426df5;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+
+        padding: 4px;
+      }
+      .correctasNum{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 30px;
+        span{
+
+          font-size: 25px;
+        }
+      }
+    }
+    .erradas{
+      background: white;
+      position: relative;
+      height: 70px;
+      color: black;
+      text-align: center;
+      .detalle{
+        display: block;
+        background: #6d47a0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+
+        padding: 4px;
+      }
+      .correctasNum{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 30px;
+        span{
+
+          font-size: 25px;
+        }
+      }
+    }
+    .puntaje{
+      background: white;
+      position: relative;
+      height: 70px;
+      color: black;
+      text-align: center;
+      .detalle{
+        display: block;
+        background: #fd44bb;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+
+        padding: 4px;
+      }
+      .correctasNum{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 30px;
+        span{
+
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .cd-panel__container-mobile {
+      top: 45px !important;
+  }
+  div.cd-panel__content {
+    background: url('https://res.cloudinary.com/admsys-storage/image/upload/f_auto,q_auto:best/smarteducation/masterbrain/civicamente-v2/estadistica/bg-confetti.svg'), #E9E9E9;
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .contenedorPreguntas{
+      padding: 1px;
+      margin-bottom: 50px;
+      .respuestas{
+        margin: 0px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        p{
+          padding: 0;
+          font-size: 12px;
+
+        }
+      }
+
+      .preguntas{
+        margin: 10px;
+        background: white;
+        border: solid 1px #ccd3da;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        .accordion-item{
+          list-style-type: none;
+          padding: 7px 0px 15px 15px;
+          font-size: 15px;
+
+        }
+        .q-card__section--vert {
+            padding: 0px !important;
+        }
+        .icono{
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+          justify-items: center;
+          justify-self: center;
+          display: flex;
+
+          img{
+            width: 25px;
+            margin-top: 25px;
+          }
+        }
+        .puntaje{
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+          justify-items: center;
+          justify-self: center;
+          display: flex;
+          width: 100%;
+          text-align: center;
+          background: #6f49a4;
+
+          p{
+
+            color: white;
+
+          }
+        }
+        .respuestasExpandidas{
+          color: #6f49a4;
+
+          font-size: 15px;
+          padding: 0px !important;
+          margin: 6px 0px 0px 0px;
+        }
+        p{
+          padding: 15px;
+          color: black;
+        }
+      }
+    }
+    h3 {
+      //
+      // font-size: 20px;
+      // color: #4A4A4A;
+      // letter-spacing: 0;
+      // text-align: left;
+      // text-shadow: 0 1px 0 #FFFFFF;
+    }
+    div.infoResultados {
+      background: #FFFFFF;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
+      border-radius: 4px;
+      padding: 5px;
+      height: 100%;
+      div.icono {
+        position: relative;
+        width: 49px;
+        height: 46px;
+        background-color: #4B61E6;
+        border-radius: 50%;
+        margin-right: 15px;
+        margin-left: 5px;
+        i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-size: 20px;
+        }
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          font-size: 20px;
+        }
+      }
+      div.detalle {
+        width: 80%;
+        span {
+          display: block;
+
+          font-size: 11px;
+          line-height: 13px;
+          color: #4A4A4A;
+          text-align: left;
+        }
+        p {
+          font-size: 12px;
+          color: #32323F;
+          letter-spacing: 0;
+          text-align: left;
+          margin: 0;
+        }
+      }
+    }
+    nav {
+      .nav.nav-tabs {
+        border: unset;
+        padding: 0 15px;
+        a {
+          position: relative;
+
+          font-size: 16px;
+          line-height: 16px;
+          color: #4A4A4A;
+          letter-spacing: 0;
+          text-align: center;
+          margin: unset;
+          border: unset;
+          padding: 0.5rem 15px;
+          &.active {
+            color: #4B61E6;
+            background: #FFFFFF;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            &:before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: -10px;
+              width: 10px;
+              height: 20px;
+              background-color: #E9E9E9;
+              border-bottom-right-radius: 15px;
+              z-index: 3;
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              right: -10px;
+              width: 10px;
+              height: 20px;
+              background-color: #E9E9E9;
+              border-bottom-left-radius: 15px;
+              z-index: 3;
+            }
+            &:hover {
+              border-color: unset
+            }
+            div.activeNavLink {
+              &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: -10px;
+                width: 10px;
+                height: 20px;
+                background-color: white;
+                z-index: 2;
+              }
+              &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: -10px;
+                width: 10px;
+                height: 20px;
+                background-color: white;
+                z-index: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+    div#nav-tabContent {
+      background-color: white;
+      border-radius: 4px;
+      table {
+        thead {
+          background: #32323F;
+          border-radius: 5px;
+          th {
+            border: 0;
+            vertical-align: middle;
+
+            font-size: 14px;
+            color: #EEF3F7;
+            letter-spacing: 0;
+            line-height: 14px;
+            &:first-of-type {
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+            }
+            &:last-of-type {
+              border-top-right-radius: 5px;
+              border-bottom-right-radius: 5px;
+            }
+          }
+        }
+        tbody {
+          &:before {
+            content:"@";
+            display:block;
+            line-height:10px;
+            text-indent:-99999px;
+          }
+          tr:nth-of-type(odd) {
+            background: #EEF3F7;
+            border-radius: 5px;
+          }
+          tr {
+            th, td {
+              font-size: 13px;
+              color: #4A4A4A;
+              text-align: left;
+              line-height: 17px;
+              vertical-align: middle;
+              button {
+                padding: 10px 4px;
+              }
+            }
+            th.pregunta {
+              position: relative;
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
+              span {
+                display: block;
+                width: 75%;
+              }
+              div.documentoTrivia {
+                position: absolute;
+                top: 50%;
+                right: 5%;
+                transform: translate(-50%, -50%);
+                height: 25px;
+                width: 27px;
+                i {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+                svg {
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                }
+              }
+            }
+            td.resultado {
+              font-size: 20px;
+              &.correcto {
+                color: #6AB04C;
+              }
+              &.errado {
+                color: #EB4D4B;
+              }
+            }
+            td.respuestaElegida, td.respuestaCorrecta {
+              font-size: 12px;
+              color: #32323F;
+              text-align: center;
+              font-weight: 700;
+            }
+            td:last-of-type {
+              border-top-right-radius: 5px;
+              border-bottom-right-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}

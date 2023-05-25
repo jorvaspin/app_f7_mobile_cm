@@ -1,0 +1,23 @@
+div#logros-mobile {
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  .page-content {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .cd-panel__container-mobile {
+      top: 50px !important;
+  }
+  div.cd-panel__content {
+    background: url('https://res.cloudinary.com/admsys-storage/image/upload/f_auto,q_auto:best/smarteducation/masterbrain/civicamente-v2/estadistica/bg-confetti.svg'), #E9E9E9;
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,658 @@
+.modal{
+    z-index: 6004;
+}
+.modal-backdrop {
+    z-index: 6001 !important;
+}
+.modal-content {
+    margin: 2px auto;
+    z-index: 6002 !important;
+    border-radius: 1rem;
+}
+
+.modalConsejo-web {
+    // z-index: 6950 !important;
+    // background: rgba(44, 44, 65, 0.95);
+
+    &>div.modal-dialog {
+        max-width: 600px !important;
+
+        .modal-body{
+            padding: 2.5em !important;
+            overflow: visible !important;
+        }
+
+        &>div.modal-content {
+            // border-radius: 1rem;
+            // overflow: hidden;
+
+            // height: 328px;
+            header.modal-header {
+                // background-image: linear-gradient(134deg, #4B61E6 0%, #7E41EF 100%);
+                // color: white;
+                // padding: 2rem;
+                // border-bottom:none;
+
+                div.modal-title {
+                    // width: 100%;
+                    // padding: 1px 0px 0;
+
+                    h3 {
+                        font-size: 2.3rem !important;
+                        line-height: 1em;
+                        text-align: left;
+
+                    }
+
+                    p {
+                        font-family: inherit;
+                        font-size: 1.6rem !important;
+                        line-height: 1.6rem !important;
+                        margin: 0;
+                        max-width: 60% !important;
+                    }
+                }
+            }
+
+            div.contenido {
+
+                font-size: 1.4rem !important;
+                line-height: 18px;
+
+                p{
+                    max-width: 70% !important;
+                }
+
+                button {
+                    margin-top: 20px !important;
+                }
+            }
+
+            img {
+              right: -13em !important;
+              width: auto;
+              height: 140% !important;
+            }
+        }
+    }
+}
+
+.modal.modalInfoAvatar {
+    background: rgba(44, 44, 65, 0.95);
+
+    &>div.modal-dialog {
+        max-width: 550px;
+
+        &>div.modal-content {
+
+            // height: 328px;
+            header.modal-header {
+                background-image: linear-gradient(134deg, #4B61E6 0%, #7E41EF 100%);
+                color: white;
+                height: 82px;
+                padding: 0;
+                position: relative;
+                border-radius: .5rem .5rem 0 0;
+
+                div.modal-title {
+                    width: 100%;
+                    padding: 5px 20px 0;
+
+                    img {
+                        width: 140px;
+                        height: 140px;
+                        margin-right: 5px;
+                        border: 5px solid white;
+                        border-radius: 50%;
+                        background-color: white;
+                        margin-left: auto;
+                    }
+
+                    h3 {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        font-size: 23px;
+                        line-height: 23px;
+                        text-align: left;
+                        margin: 0;
+                        max-width: 70%;
+                    }
+
+                    p {
+                        font-size: 13px;
+                        line-height: 15px;
+                        margin: 0
+                    }
+                }
+
+                button.close {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translate(50%, -50%);
+                    height: 46px;
+                    width: 46px;
+
+                    background: #4D4F7F;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 29px;
+                    text-align: center;
+                    padding: 0;
+                    margin: 0;
+                    text-transform: uppercase;
+                    opacity: 1;
+                    transition: .5s all;
+                    text-shadow: unset;
+
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+
+            div.modal-body {
+                min-height: 338px;
+                padding: 50px 20px 10px;
+                font-size: 1.5rem;
+                line-height: 2.3rem;
+                color: #42424f;
+                margin: 0;
+                margin-top: 2rem;
+
+                h3 {
+
+                    font-size: 19px;
+                    color: #4B61E6;
+                    text-align: left;
+                }
+            }
+
+            footer.modal-footer {
+                background: #DFE6E9;
+                border-radius: 0 0 .5rem .5rem;
+
+                button {
+                    width: 266px;
+                    height: 55px;
+                    font-size: 19px;
+                    line-height: 19px;
+                    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.30);
+                }
+            }
+        }
+    }
+}
+
+
+.modal#modalNotificacionDuelo {
+    background: #2c2c41f2;
+
+    &>div.modal-dialog {
+        max-width: 550px;
+
+        &>div.modal-content {
+
+            // height: 328px;
+            header.modal-header {
+                background-image: linear-gradient(134deg, #4B61E6 0%, #7E41EF 100%);
+                color: white;
+                position: relative;
+
+                div.modal-title {
+                    width: 60%;
+                    padding: 5px 20px 0;
+
+                    h3 {
+
+                        font-size: 20px;
+                        line-height: 20px;
+                        text-align: left;
+                        margin-bottom: 3px;
+                    }
+
+                    p {
+                        font-size: 13px;
+                        line-height: 15px;
+                        margin: 0
+                    }
+
+                    img {
+                        position: absolute;
+                        bottom: -10px;
+                        right: 5%;
+                        width: 180px;
+                    }
+                }
+            }
+
+            div.contenido {
+                min-height: 198px;
+                font-size: 14px;
+                line-height: 18px;
+                color: #32323F;
+                padding: 10px 20px 20px;
+
+                p {
+                    font-weight: 700;
+                }
+
+                div.card.cardDuelista {
+                    background-image: linear-gradient(135deg, #EDF0F6 0%, #C9D6E8 100%);
+                    box-shadow: 0 3px 0 0 #B8E986;
+                    border-radius: 4px;
+                    padding: 10px 0px 0px 0px;
+                    max-width: 100%;
+                    height: 100px;
+                    max-height: 130px;
+                    margin: auto;
+
+                    .imgduelistas {
+                      padding: 0px;
+                      text-align: center;
+                        img {
+                            width: 80px;
+                        }
+                    }
+
+                    img.card-img {
+                      border: 2px solid white;
+                      border-radius: 50%;
+                      height: 80px;
+                      width: 80px;
+                      padding: 0;
+                      margin: 0px;
+                    }
+
+                    div.card-body {
+                        padding-top: 15px;
+                        padding-right: 5px;
+                        padding-bottom: 0;
+                        padding-left: 10px;
+
+                        h6.card-subtitle {
+
+                            font-size: 9px;
+                            line-height: 9px;
+                            color: #4B61E6;
+                            letter-spacing: 0;
+                            padding-bottom: 2px;
+                        }
+
+                        h5.card-title {
+
+                            font-size: 11px;
+                            color: #32323F;
+                            letter-spacing: 0;
+                            line-height: 14px;
+                            margin-bottom: 0;
+                            text-transform: uppercase;
+                            max-width: 80px;
+                        }
+
+                        p.card-text {
+
+                            font-size: 14px;
+                            color: #54137B;
+                            letter-spacing: 0;
+                            text-transform: uppercase
+                        }
+
+                        div.row div.col.d-flex.align-items-center {
+                            img {
+                                width: 10px
+                            }
+
+                            p {
+
+                                font-size: 9px;
+                                line-height: 9px;
+                                color: #32323F;
+                                letter-spacing: 0;
+                                padding: 1px 0 0 3px;
+                            }
+                        }
+                    }
+
+                    div.identificador {
+                        position: absolute;
+                        top: 0;
+                        right: 5%;
+                        transform: translateY(-50%);
+                        width: 75px;
+                        border-radius: 15px;
+                        text-transform: uppercase;
+                        font-size: 10px;
+                        line-height: 17px;
+
+                        &.usuarioActual {
+                            background-image: linear-gradient(134deg, #4B61E6 0%, #7E41EF 100%);
+
+                            color: #FFFFFF;
+                            letter-spacing: 0;
+                            text-align: center;
+                            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.20);
+                        }
+
+                        &.rival {
+                            background-image: linear-gradient(225deg, #FFD97C 0%, #F6A742 100%);
+
+                            color: #FFFFFF;
+                            letter-spacing: 0;
+                            text-align: center;
+                            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.20);
+                        }
+                    }
+                }
+
+                button {
+                    width: 180px;
+                    height: 40px;
+                    font-size: 13px;
+                    line-height: 13px;
+                    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.30);
+                }
+            }
+        }
+    }
+
+    .imgSearch {
+      width: 30px;
+      padding: 2px;
+      position: absolute;
+      left: 20%;
+      top: -10px;
+    }
+
+}
+
+.modal#modalNotificacionNuevoDuelo {
+    background: rgba(44, 44, 65, 0.95);
+
+    &>div.modal-dialog {
+        max-width: 550px;
+
+        &>div.modal-content {
+
+            // height: 328px;
+            header.modal-header {
+                background-image: linear-gradient(134deg, #4B61E6 0%, #7E41EF 100%);
+                color: white;
+                position: relative;
+
+                div.modal-title {
+                    width: 60%;
+                    padding: 20px 15px 15px;
+
+                    h3 {
+
+                        font-size: 20px;
+                        line-height: 20px;
+                        text-align: left;
+                        margin: 0;
+                    }
+
+                    img {
+                        position: absolute;
+                        bottom: -10px;
+                        right: 5%;
+                        width: 180px;
+                    }
+                }
+            }
+
+            div.contenido {
+                min-height: 198px;
+                font-size: 14px;
+                line-height: 18px;
+                color: #32323F;
+                padding: 10px 20px 20px 20px;
+
+                p {
+                    font-weight: 700;
+
+                    span {
+                        color: #4B61E6;
+                    }
+                }
+
+                div.card.cardDuelista {
+                    background-image: linear-gradient(135deg, #EDF0F6 0%, #C9D6E8 100%);
+                    box-shadow: 0 3px 0 0 #B8E986;
+                    border-radius: 4px;
+                    padding: 10px;
+                    max-width: 200px;
+                    max-height: 130px;
+                    margin: auto;
+
+                    .imgduelistas {
+                        img {
+                            width: 80px;
+                        }
+                    }
+
+                    img.card-img {
+                        border: 4px solid white;
+                        border-radius: 50%;
+                        height: 80px;
+                        width: 80px;
+                    }
+
+                    div.card-body {
+                        padding-top: 15px;
+                        padding-right: 5px;
+                        padding-bottom: 0;
+                        padding-left: 10px;
+
+                        h6.card-subtitle {
+
+                            font-size: 9px;
+                            line-height: 9px;
+                            color: #4B61E6;
+                            letter-spacing: 0;
+                            padding-bottom: 2px;
+                        }
+
+                        h5.card-title {
+
+                            font-size: 11px;
+                            color: #32323F;
+                            letter-spacing: 0;
+                            line-height: 14px;
+                            margin-bottom: 0;
+                            text-transform: uppercase;
+                            max-width: 80px;
+                        }
+
+                        p.card-text {
+
+                            font-size: 14px;
+                            color: #54137B;
+                            letter-spacing: 0;
+                            text-transform: uppercase
+                        }
+
+                        div.row div.col.d-flex.align-items-center {
+                            img {
+                                width: 10px
+                            }
+
+                            p {
+
+                                font-size: 9px;
+                                line-height: 9px;
+                                color: #32323F;
+                                letter-spacing: 0;
+                                padding: 1px 0 0 3px;
+                            }
+                        }
+                    }
+
+                    div.identificador {
+                        position: absolute;
+                        top: 0;
+                        right: 5%;
+                        transform: translateY(-50%);
+                        width: 75px;
+                        border-radius: 15px;
+                        text-transform: uppercase;
+                        font-size: 10px;
+                        line-height: 17px;
+
+                        &.usuarioActual {
+                            background-image: linear-gradient(134deg, #4B61E6 0%, #7E41EF 100%);
+
+                            color: #FFFFFF;
+                            letter-spacing: 0;
+                            text-align: center;
+                            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.20);
+                        }
+
+                        &.rival {
+                            background-image: linear-gradient(225deg, #FFD97C 0%, #F6A742 100%);
+
+                            color: #FFFFFF;
+                            letter-spacing: 0;
+                            text-align: center;
+                            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.20);
+                        }
+                    }
+                }
+
+                button {
+                    width: 180px;
+                    height: 40px;
+                    font-size: 13px;
+                    line-height: 13px;
+                    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.30);
+                }
+            }
+        }
+    }
+}
+
+.bg-morado-duelo{
+  background-image: url('https://res.cloudinary.com/admsys-storage/image/upload/v1622823679/smarteducation/masterbrain/civicamente-app/mobile/duelos/bg_header-3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 180px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.duelsInfoActivo{
+  display: block;
+
+  .bg-duelomini-left{
+
+    width: 100%;
+    height: 150px;
+    display: block;
+    z-index: 2;
+    padding: 5px 0px 0px 0px;
+
+    .avatar-name{
+      display: block;
+      width: 100%;
+      padding-left: 75px;
+      height: 60px;
+
+        img{
+          width: 60px;
+          position: absolute;
+          left: 25px;
+          top: 8px;
+        }
+
+        .cinta-retador{
+          position: absolute;
+          left: 8%;
+          top: 35%;
+        }
+
+      p{
+        margin: 0px;
+      }
+    }
+
+    .info-mini{
+        height: 55px;
+        padding: 10px 10px 10px 0px;
+
+      p{
+        margin-bottom: 0px !important;
+      }
+    }
+
+    .puntaje{
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+      justify-content: center;
+      line-height: 0;
+
+      p{
+        margin: 0px;
+        padding: 0px;
+      }
+    }
+
+    .pts{
+      width: 100%;
+      text-align: center;
+      margin-top: -6px;
+      justify-content: center;
+      display: block;
+
+      p{
+        margin: 0px;
+        padding: 0px;
+      }
+    }
+  }
+
+  .bg-duelomini-right{
+
+    width: 100%;
+    height: 150px;
+    z-index: 2;
+    padding: 5px 0px 0px 0px;
+
+    .avatar-name{
+      display: block;
+      width: 100%;
+      padding-left: 70px;
+      height: 55px;
+
+      .cinta-contrincante{
+        position: absolute;
+        left: 0%;
+        top: 32%;
+      }
+
+      p{
+        margin: 0px;
+      }
+    }
+
+    .info-mini{
+        height: 55px;
+        padding: 10px 10px 10px 0px;
+
+      p{
+        margin-bottom: 0px !important;
+      }
+    }
+
+    img{
+      width: 55px;
+      position: absolute;
+      left: 20px;
+      top: 8px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>106830110355-foqpd68h2ro00sd523vork0r39ll9ai0.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.106830110355-foqpd68h2ro00sd523vork0r39ll9ai0</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBgrkzxFxyjZe-FzLWAMRsS5sXcNh76GBc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>106830110355</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>cl.civicamente.app</string>
+	<key>PROJECT_ID</key>
+	<string>cm-message-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cm-message-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:106830110355:ios:673468b1b35ebdc1527766</string>
+</dict>
+</plist>

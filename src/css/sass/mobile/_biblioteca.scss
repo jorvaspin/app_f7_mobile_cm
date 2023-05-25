@@ -1,0 +1,643 @@
+.bibliotecaPage{
+    .contenido-destacado {
+      position: relative;
+
+    }
+
+
+    .swal-icon--custom {
+        width: 40% !important;
+        max-width: 100%;
+    }
+
+    .swal-button {
+        padding: 8px 18px !important;
+    }
+
+    .bibliotecaPage div.contenedorTematicas div.tematica .slick-prev,
+    .bibliotecaPage div.contenedorTematicas div.tematica .slick-next {
+        background: none !important;
+    }
+
+    .grupos-swiper {
+      min-height: 18rem;
+      display: flex;
+      z-index: 99;
+
+        & .swiper-slide {
+            // margin-right: 10px;
+            max-width: 20rem !important;
+            z-index: 0;
+            transition-property: transform;
+            display: block;
+        }
+
+        & .swiper-pagination {
+            bottom: 1rem;
+
+            & .swiper-pagination-bullet {
+                background: rgba(#000, .4);
+                transition: transform .2s ease-in-out;
+            }
+
+            & .swiper-pagination-bullet-active {
+                background: var(--bg-gradient-primary);
+                transform: scale(1.5);
+                transition: transform ease-in-out .3;
+            }
+        }
+
+        .swiper-button-prev{
+          background-image: url('https://res.cloudinary.com/admsys-storage/image/upload/smarteducation/masterbrain/civicamente-v2/icons/arrow-left.svg');
+          width: 35px;
+          background-repeat: no-repeat;
+          height: 85px;
+          top: 35%;
+          left: -7px;
+          background-size: contain;
+        background-position: center;
+          display: flex;
+          z-index: 90;
+          position: absolute;
+          &:after{
+            content: none;
+
+          }
+        }
+        .swiper-button-next{
+          background-image: url('https://res.cloudinary.com/admsys-storage/image/upload/smarteducation/masterbrain/civicamente-v2/icons/arrow-right.svg');
+          width: 35px;
+          background-repeat: no-repeat;
+          height: 85px;
+          top: 35%;
+          right: -3px;
+          background-size: contain;
+              background-position: center;
+          display: flex;
+          z-index: 90;
+          position: absolute;
+          &:after{
+            content: none;
+
+          }
+        }
+    }
+
+    .grupos-tematicas {
+        .grupo-card {
+            margin: 0;
+            border-radius: 1rem;
+            padding: 1.5rem 2rem;
+            color: #fff;
+            box-shadow: 0 2px 15px 0 rgba(#E56A6B, .4);
+            background-size: cover;
+
+            // .card-header {
+            //     color: #fff;
+            //     background: none;
+            //     border: none;
+            //     padding: 0;
+            //     align-items:center;
+            //     justify-content: flex-start;
+
+            //     span {
+            //         margin-right: .7rem;
+            //     }
+
+            //     // h4 {
+            //     //     margin: 0;
+            //     //     font-size: 1.8rem;
+            //     //     line-height: 1.3em;
+            //     // }
+
+            //     &:after {
+            //         content: none;
+            //     }
+            // }
+
+            .card-content {
+                padding: 1rem 0 0;
+                font-size: 1rem;
+                line-height: 1.3em;
+
+                h5.cant-tematicas {
+                    color: #fff;
+                    position: absolute;
+                    margin: 0;
+                    bottom: 0;
+                    right: 0;
+                    text-align: left;
+                }
+            }
+        }
+
+        .descripcion-grupo {
+            min-height: 8rem;
+        }
+
+        p {
+            position: absolute;
+            right: 5%;
+            bottom: 1%;
+        }
+    }
+
+    .tematicas-completadas {
+        padding: 4rem 2rem 10rem;
+        color: black;
+        text-align: center;
+        margin-bottom: 85px;
+
+        .header-text {
+            display: flex;
+            text-align: left;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 1rem;
+
+            h4 {
+                width: 70%;
+                font-size: 1.7rem;
+                line-height: 2.0rem;
+                margin: 0;
+            }
+
+            span {
+                color: #4e3c93;
+            }
+        }
+
+        span {
+            color: #e28533;
+        }
+
+        div.card {
+            margin: 5px;
+
+            .dificultad {
+                display: inline-block;
+                margin-bottom: 10px;
+                background-image: linear-gradient(134deg, #FF0467 0%, #FC7437 100%);
+                border-radius: 12.5px;
+                padding: 5px 10px;
+
+                ;
+                font-size: 9px;
+                line-height: 9px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                text-align: center;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+            }
+
+            .likeanimation {
+                position: absolute;
+                left: 50%;
+                top: 25%;
+                z-index: 9999999999999;
+                display: none;
+
+                img {
+                    width: 96px;
+                }
+
+                svg {
+                    display: block !important;
+                    height: 100% !important;
+                }
+            }
+
+            div.imagenTematicas {
+                background-size: cover;
+                background-position: center;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            div.imagenTematica {
+                background-image: url('https://res.cloudinary.com/admsys-storage/image/upload/f_auto,q_auto:best/smarteducation/masterbrain/civicamente-v2/biblioteca/tematica.svg');
+                background-size: cover;
+                background-position: center;
+                border-radius: 0px;
+                height: 130px;
+
+                .status {
+                    position: absolute;
+                    bottom: 0;
+                    font-size: 10px;
+                    text-align: center;
+                    width: 100%;
+                    border-radius: 5px;
+                    background: #44d444;
+                    color: white;
+
+                }
+            }
+
+            span.numeroTematica {
+                position: absolute;
+                top: 2%;
+                left: 2%;
+                width: 42px;
+                height: 38px;
+                background-image: linear-gradient(135deg, #656D78 0%, #2F3640 100%);
+                box-shadow: 0 2px 0 0 #2A2D33;
+                border-radius: 50%;
+
+                font-size: 16px;
+                line-height: 28px;
+                padding: 7px 7px 5px 7px;
+                color: #FECA57;
+                letter-spacing: 0;
+                text-align: center;
+            }
+
+            div.interaccion {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                max-width: 33.3333333333%;
+                height: 50%;
+                // opacity: 0.8;
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000000 100%);
+                border-bottom-left-radius: 5px;
+                padding-top: 60px;
+
+                div.likes {
+                    cursor: pointer;
+
+                    font-size: 13px;
+                    color: #EEF3F7;
+                    letter-spacing: 0.3px;
+                    line-height: 13px;
+                    margin-left: 10%;
+
+                    i {
+                        font-size: 18px;
+                        color: #FF0467;
+                        letter-spacing: 0.27px;
+                        margin-right: 5px;
+                        width: 30px;
+                        text-align: center;
+                    }
+
+                    svg {
+                        font-size: 18px;
+                        color: #FF0467;
+                        letter-spacing: 0.27px;
+                        margin-right: 5px;
+                        width: 30px;
+                        text-align: center;
+                    }
+                }
+
+                div.participantes {
+                    cursor: pointer;
+
+                    font-size: 13px;
+                    color: #EEF3F7;
+                    letter-spacing: 0.3px;
+                    line-height: 13px;
+                    margin-left: 14%;
+                    position: absolute;
+                    bottom: 10px;
+
+                    i {
+                        font-size: 18px;
+                        color: #FFEAA7;
+                        letter-spacing: 0.27px;
+                        margin-right: 5px;
+                        width: 30px;
+                        text-align: center;
+                    }
+
+                    svg {
+                        font-size: 18px;
+                        color: #FFEAA7;
+                        letter-spacing: 0.27px;
+                        margin-right: 5px;
+                        width: 30px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            div.card-body {
+                flex: 1 1 auto;
+                min-height: 1px;
+                padding: 0px 5px 10px 10px;
+
+                h5 {
+                    font-size: 12px;
+                    color: #32323F;
+                    letter-spacing: 0.25px;
+                    line-height: 12px;
+                    height: 40px;
+                    margin-bottom: 0;
+                    padding-top: 15px;
+                }
+
+                p.descripcionTematica {
+                    position: relative;
+                    height: 40px;
+                    overflow: hidden;
+                    font-size: 10px;
+                    color: #32323F;
+                    letter-spacing: 0.28px;
+                    line-height: 16px;
+                    margin: 0;
+                    white-space: normal;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 45%;
+                        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 4%, #FFFFFF 77%);
+                    }
+                }
+
+                div.tiempoLectura {
+                    display: inline-block;
+                    padding: 5px 10px;
+                    background-image: linear-gradient(-49deg, #989ea9 0%, #8F9AA8 100%);
+                    border-radius: 12.5px;
+
+                    font-size: 9px;
+                    line-height: 9px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    text-align: center;
+                    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.20);
+                    text-transform: uppercase
+                }
+
+                .btnComenzar {
+                    font-size: 10px !important;
+                    padding: 5px !important;
+                }
+
+                div.contenedorPreguntas {
+                    i {
+                        font-size: 8px;
+                        line-height: 14px;
+                        color: #4A4A4A;
+                        letter-spacing: 0.21px;
+                        margin-right: 5px
+                    }
+
+                    svg {
+                        font-size: 14px;
+                        line-height: 14px;
+                        color: #4A4A4A;
+                        letter-spacing: 0.21px;
+                        margin-right: 5px
+                    }
+
+                    span {
+                        font-size: 8px;
+                        line-height: 12px;
+                        color: #4A4A4A;
+                        letter-spacing: 0.18px;
+                    }
+                }
+            }
+
+            div.contenedorPuntajeEstatus {
+                position: absolute;
+                top: 0;
+                right: 5px;
+                transform: translateY(-50%);
+
+                div.puntajeObtenido {
+                    padding: 2px 5px;
+                    background-image: linear-gradient(135deg, #FFD97C 0%, #F6A742 100%);
+                    border-radius: 12.5px;
+
+                    font-size: 9px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    text-align: center;
+                    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.20);
+                    width: 80px;
+                    text-transform: uppercase;
+                }
+
+                div.estatus {
+                    padding: 5px 10px;
+                    background-image: linear-gradient(135deg, #43E695 0%, #3BB2B8 100%);
+                    border-radius: 12.5px;
+
+                    font-size: 9px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    text-align: center;
+                    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.20);
+                    width: 80px;
+                    text-transform: uppercase;
+                }
+
+                div.tematicaNueva {
+                    padding: 5px 10px;
+                    background-image: linear-gradient(134deg, #FF0467 0%, #FC7437 100%);
+                    border-radius: 12.5px;
+
+                    font-size: 9px;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    text-align: center;
+                    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.20);
+                    width: 80px;
+                    text-transform: uppercase;
+                }
+            }
+
+            &.completada {
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), 0 -4px 0 0 #3CB6B6;
+                margin: 20px 0px 20px 0px;
+                width: 100%;
+
+                div.imagenTematicas {
+                    opacity: .5;
+                }
+
+                div.imagenTematica {
+                    opacity: 1;
+                }
+
+                h5,
+                p.descripcionTematica {
+                    opacity: 1;
+                }
+
+                div.checkCompletada {
+                    position: absolute;
+                    top: 50%;
+                    left: 16.5%;
+                    transform: translate(-50%, -50%);
+                    background-image: linear-gradient(135deg, #43E695 0%, #3BB2B8 100%);
+                    box-shadow: 0 2px 0 0 #2C967C;
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 50%;
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 21px;
+                        color: #FFFFFF;
+                        letter-spacing: 0;
+                        text-align: center;
+                    }
+
+                    svg {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 21px;
+                        color: #FFFFFF;
+                        letter-spacing: 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .cardBibliotecaMobile {
+        border-radius: 0px !important;
+        position: relative;
+        box-shadow: none;
+
+        .descripcion {
+            padding: 2rem 0 3rem !important;
+        }
+
+
+        .tematicas-swiper {
+            margin: 0 0 2rem 0;
+            min-height: 16rem;
+
+            & .swiper-pagination {
+                bottom: 0;
+
+                & .swiper-pagination-bullet {
+                    background: rgba(var(--color-dark), .7);
+                    transition: transform .2s ease-in-out;
+                }
+
+                & .swiper-pagination-bullet-active {
+                    background: var(--bg-gradient-primary);
+                    transform: scale(1.5);
+                    transition: transform ease-in-out .3;
+                }
+            }
+
+            .swiper-button-prev{
+              background-image: url('https://res.cloudinary.com/admsys-storage/image/upload/smarteducation/masterbrain/civicamente-v2/icons/arrow-left.svg');
+              width: 35px;
+              background-repeat: no-repeat;
+              height: 70px;
+              top: 40%;
+              left: -5px;
+              background-size: contain;
+              background-position: center;
+              display: flex;
+              z-index: 90;
+              position: absolute;
+              &:after{
+                content: none;
+
+              }
+            }
+            .swiper-button-next{
+              background-image: url('https://res.cloudinary.com/admsys-storage/image/upload/smarteducation/masterbrain/civicamente-v2/icons/arrow-right.svg');
+              width: 35px;
+              background-repeat: no-repeat;
+              height: 70px;
+              top: 40%;
+              right:-5px;
+              background-size: contain;
+              background-position: center;
+              display: flex;
+              z-index: 90;
+              position: absolute;
+              &:after{
+                content: none;
+
+              }
+            }
+
+        }
+
+        .tematicas-swiper-completadas {
+            margin: 0 0 2rem 0;
+            min-height: 10rem;
+
+            & .swiper-pagination {
+                bottom: 0;
+
+                & .swiper-pagination-bullet {
+                    background: rgba(var(--color-dark), .7);
+                    transition: transform .2s ease-in-out;
+                }
+
+                & .swiper-pagination-bullet-active {
+                    background: var(--bg-gradient-primary);
+                    transform: scale(1.5);
+                    transition: transform ease-in-out .3;
+                }
+            }
+
+            .swiper-button-prev{
+              background-image: url('https://res.cloudinary.com/admsys-storage/image/upload/smarteducation/masterbrain/civicamente-v2/icons/arrow-left.svg');
+              width: 35px;
+              background-repeat: no-repeat;
+              height: 70px;
+              top: 40%;
+              left: -5px;
+              background-size: contain;
+              background-position: center;
+              display: flex;
+              z-index: 90;
+              position: absolute;
+              &:after{
+                content: none;
+
+              }
+            }
+            .swiper-button-next{
+              background-image: url('https://res.cloudinary.com/admsys-storage/image/upload/smarteducation/masterbrain/civicamente-v2/icons/arrow-right.svg');
+              width: 35px;
+              background-repeat: no-repeat;
+              height: 70px;
+              top: 40%;
+              right: -5px;
+              background-size: contain;
+              background-position: center;
+              display: flex;
+              z-index: 90;
+              position: absolute;
+              &:after{
+                content: none;
+
+              }
+            }
+
+        }
+
+        &.cardBibliotecaTematicasFinalizadas {
+            min-height: 45rem;
+        }
+    }
+
+
+}

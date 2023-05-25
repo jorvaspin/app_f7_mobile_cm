@@ -1,0 +1,51 @@
+{
+  "name": "cl.civicamente.app",
+  "displayName": "civicamente",
+  "version": "1.1.2",
+  "description": "Civicamente es la plataforma lider para aprender educacion civica y formacion ciudadana.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "SmartEducation",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^9.1.0",
+    "cordova-browser": "^6.0.0",
+    "cordova-ios": "^6.2.0",
+    "cordova-plugin-firebase-analytics": "~6.1.0",
+    "cordova-plugin-firebase-messaging": "^6.1.0",
+    "cordova-plugin-inappbrowser": "^5.0.0",
+    "cordova-plugin-keyboard": "^1.2.0",
+    "cordova-plugin-splashscreen": "^6.0.0",
+    "cordova-plugin-statusbar": "^3.0.0",
+    "cordova-plugin-vibration": "^3.1.1",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "cordova-support-android-plugin": "~1.0.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-keyboard": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-firebase-messaging": {
+        "ANDROID_FIREBASE_MESSAGING_VERSION": "22.0.+",
+        "ANDROIDX_CORE_VERSION": "1.6.+",
+        "IOS_FIREBASE_POD_VERSION": "~> 8.8.0"
+      },
+      "cordova-plugin-vibration": {}
+    },
+    "platforms": [
+      "browser",
+      "ios"
+    ]
+  },
+  "dependencies": {
+    "cordova-plugin-firebase-inappmessaging": "5.0.0"
+  }
+}

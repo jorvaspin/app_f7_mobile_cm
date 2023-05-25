@@ -1,0 +1,43 @@
+.page-lessons{
+    --f7-navbar-large-title-height: var(--page-lessons-navbar-large-title-height);
+
+    .header-page {
+        @apply w-full flex items-center overflow-hidden h-auto;
+        white-space: normal !important;
+        z-index: 5;
+
+        &.header-lessons-pending {
+            background-color: var(--color-lessons-pending);
+        }
+
+        &.header-lessons-kanban {
+            background-color: var(--color-lessons-kanban);
+        }
+
+        &.header-lessons-groups {
+            background-color: var(--color-lessons-groups);
+        }
+
+        &.header-lessons-finished {
+            background-color: var(--color-lessons-finished);
+        }
+    }
+
+    .header-text {
+        @apply text-white w-full;
+        text-overflow: ellipsis;
+        white-space: normal !important;
+        overflow: hidden;
+
+        & h3{
+            @apply font-semibold leading-none tracking-tight;
+        }
+        & p{
+            @apply mt-2 text-sm font-normal leading-tight;
+        }
+    }
+}
+
+.bg-pages{
+    @apply bg-palette-light-bg dark:bg-palette-dark-bg;
+  }

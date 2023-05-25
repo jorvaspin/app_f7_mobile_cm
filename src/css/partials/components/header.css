@@ -1,0 +1,10 @@
+.desktopNavbar{
+    @apply relative top-2 mx-3 h-14 left-0 right-0 flex items-center justify-between rounded bg-indigo-cm bg-cover bg-center px-4;
+}
+
+.desktopNavbar .nav-link{
+    @apply py-2 px-3 font-display uppercase text-sm flex items-center justify-center align-middle gap-2 no-underline hover:no-underline text-gray-50 rounded hover:bg-gray-800 hover:bg-opacity-40 hover:text-green-300 transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75 w-auto;
+}
+.desktopNavbar .nav-link .nav-icon{
+    @apply w-4 h-4 transform transition-transform;
+}

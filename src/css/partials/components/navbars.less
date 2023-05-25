@@ -1,0 +1,53 @@
+.navbar-lessons {
+    --f7-navbar-bg-color: #64748b;
+    --f7-navbar-large-title-height: var(--page-lessons-navbar-large-title-height);
+    --f7-navbar-large-title-font-size: 22px;
+    --f7-navbar-large-title-font-weight: 600;
+    --f7-navbar-large-title-line-height: 1;
+
+        &.lessons-pending {
+            --f7-navbar-bg-color: var(--color-lessons-pending);
+        }
+
+        &.lessons-kanban {
+            --f7-navbar-bg-color: var(--color-lessons-kanban);
+        }
+
+        &.lessons-groups {
+            --f7-navbar-bg-color: var(--color-lessons-groups);
+        }
+
+        &.lessons-finished {
+            --f7-navbar-bg-color: var(--color-lessons-finished);
+        }
+
+
+
+  .title-large {
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      display: flex;
+      align-items:center;
+      white-space: normal !important;
+      overflow: hidden;
+      height: var(--f7-navbar-large-title-height);
+      z-index: 5;
+  }
+
+  .title-large-text {
+      text-overflow: ellipsis;
+      white-space: normal !important;
+      box-sizing: border-box;
+      overflow: hidden;
+      width: 100%;
+      transform: translate3d(0px,
+              calc(-1 * var(--f7-navbar-large-collapse-progress) * var(--f7-navbar-large-title-height)),
+              0);
+  }
+  }
+.navbar-news{
+    --f7-navbar-bg-color:var(--color-news);
+}

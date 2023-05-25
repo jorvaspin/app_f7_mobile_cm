@@ -1,0 +1,25 @@
+.menuBottom{
+    @apply bg-palette-light-default dark:bg-palette-dark-default !important;
+
+    & .tab-link-highlight{
+        display: none !important;
+    }
+    & .tab-link {
+        @apply text-white justify-center md:items-center dark:text-opacity-60 gap-1.5 md:gap-2 !important;
+        text-decoration: none;
+        opacity: .8;
+
+        & .tabbar-label{
+            @apply text-xxs md:text-base font-display leading-none !important;
+        }
+
+    &.tab-link-active{
+        @apply text-amber-400 bg-transparent dark:bg-transparent !important;
+
+        opacity: 1;
+        overflow: visible;
+        transform-origin: bottom;
+        transition: all 0s ease-in-out 0s;
+        }
+    }
+}

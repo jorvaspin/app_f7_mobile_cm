@@ -1,0 +1,51 @@
+.label-gradient,
+a.label-gradient,
+a.label-gradient:hover {
+
+    padding: 3px 13px;
+    border-radius: 25px;
+    // font-size: .6rem;
+    text-transform: uppercase;
+    color: white !important;
+    letter-spacing: 0;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(black, 0.20);
+
+    &.label-primary,
+    &.label-normal {
+        background-image: linear-gradient(134deg, #4B61E6 0%, #7E41EF 100%);
+    }
+
+    &.label-secondary,
+    &.label-low {
+        background-image: linear-gradient(225deg, #656D78 0%, #2F3640 100%);
+    }
+
+    &.label-success {
+        background-image: linear-gradient(225deg, #43E695 0%, #3BB2B8 100%);
+    }
+
+    &.label-info {
+        background-image: linear-gradient(225deg, #5D9CEC 0%, #0E65D7 100%);
+    }
+
+    &.label-warning,
+    &.label-high {
+        background-image: linear-gradient(225deg, #FFD97C 0%, #F6A742 100%);
+    }
+
+    &.label-danger,
+    &.label-urgent {
+        background-image: linear-gradient(134deg, #FF0467 0%, #FC7437 100%);
+    }
+
+    &.label-default {
+        background-image: linear-gradient(130deg, #B3B9C1 0%, #8F9AA8 100%);
+    }
+
+    &.label-light {
+        background-image: linear-gradient(130deg, #f2f2f2 0%, #e1e1e1 100%);
+        color: var(--color-default) !important;
+        text-shadow: none;
+    }
+}

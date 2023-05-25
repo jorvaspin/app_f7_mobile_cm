@@ -1,0 +1,161 @@
+@layer components {
+  .btn {
+      @apply shadow-[0_4px_0_0] relative w-auto flex items-center justify-center gap-3 leading-none uppercase no-underline text-center text-indigo-50 rounded-md font-display pt-4 pb-3 px-6 overflow-hidden border-b border-white border-opacity-5;
+      text-shadow: 0 2px 0 rgba(0,0,0,.2);
+
+
+      &:hover, &:focus{
+        @apply lg:shadow-[0_6px_0_0] lg:text-white;
+      }
+
+      &:active, &.active {
+        @apply shadow-[0_2px_0_0] transform translate-y-0.5 opacity-100;
+      }
+
+      &:after {
+        @apply absolute inset-x-0.5 rounded-t-lg rounded-b top-0.5 mx-auto bg-white bg-opacity-10;
+        height: 49%;
+        content: '';
+      }
+
+      &:disabled {
+        @apply cursor-not-allowed shadow-[0_2px_0_0] transform translate-y-0.5 grayscale !important;
+
+        & img{
+          @apply grayscale opacity-90
+        }
+      }
+
+      &.btn-rounded-full{
+        @apply rounded-full;
+          &:after {
+          @apply rounded-t-full rounded-b;
+        }
+      }
+
+      &.btn-shadow-sm{
+        @apply shadow-[0_2px_0_0];
+
+        &:active, &.active{
+          @apply translate-y-px;
+        }
+      }
+
+      &.btn-lg,
+      &.btn-group-lg > .btn,
+      &.btn-group-lg > .btn {
+        @apply text-lg pt-5 pb-4 px-5;
+      }
+
+      &.btn-sm,
+      &.btn-group-sm > .btn,
+      &.btn-group-sm > .btn {
+          @apply pt-3 pb-2 px-4 text-xs leading-none !important;
+      }
+
+      &.btn-primary{
+        @apply bg-primary-100 shadow-primary-200;
+      }
+
+      &.btn-secondary{
+        @apply bg-secondary-100 shadow-secondary-200;
+      }
+
+      &.btn-success{
+        @apply bg-success-100 shadow-success-200;
+      }
+
+      &.btn-danger{
+        @apply bg-danger-100 shadow-danger-200;
+      }
+
+      &.btn-warning{
+        @apply bg-warning-100 shadow-warning-200;
+      }
+
+      &.btn-info{
+        @apply bg-info-100 shadow-info-200;
+      }
+
+      &.btn-tof{
+        @apply bg-teal-500 shadow-teal-600;
+      }
+
+      &.btn-default {
+        @apply bg-default-100 shadow-default-200 text-gray-800;
+        text-shadow: 0 1px 0 rgba(255,255,255,.8);
+
+        &:after {
+          @apply bg-opacity-30;
+        }
+      }
+
+      &.btn-back {
+        height: 30px;
+        width: 30px;
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #5F86EC !important;
+        color: #fff !important;
+        overflow: hidden;
+
+        &:hover {
+          background-color: color(#5F86EC shade(5%)) !important;
+        }
+      }
+
+      &.btn-link {
+        box-shadow: none;
+        background:transparent !important;
+        text-shadow: none;
+        color: #007bff !important;
+        transition: .15s ease-in-out;
+
+        &:before {
+          content: none;
+        }
+
+        &:hover {
+          box-shadow: none;
+          transition: .15s ease-in-out;
+        }
+      }
+
+    &.btn-kanban {
+        background: linear-gradient(134deg, #5F86EC 0%, #7C4CB0 100%);
+        color: #fff !important;
+
+        &:hover {
+          background:  linear-gradient(134deg, #5F86EC 0%, #5F86EC 100%) !important;
+        }
+      }
+    }
+
+    .btn-block {
+      @apply relative w-auto inline-block leading-none uppercase text-base no-underline text-center text-indigo-50 rounded-lg overflow-hidden font-display py-4 px-5;
+      text-shadow: 0 2px 0 rgba(0,0,0,.3);
+
+      &:active, &.active {
+        @apply relative transform translate-y-0.5;
+      }
+
+      &:before {
+        @apply absolute inset-x-0.5 rounded-t-lg rounded-b-sm top-0.5 mx-auto bg-white bg-opacity-20;
+        height: 49%;
+        content: '';
+      }
+  }
+
+
+  .btn-news{
+        @apply rounded shadow-lg bg-white dark:bg-news-100 relative border-b-4 py-3 px-4
+        border-news-100 dark:border-news-200 shadow-news-200/20 w-auto flex items-center justify-start gap-3 leading-none transition-transform;
+
+    &:active, &.active {
+      @apply transform scale-95 transition-transform;
+    }
+      }
+}

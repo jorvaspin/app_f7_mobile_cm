@@ -1,0 +1,28 @@
+.bg-duels{
+    @apply bg-gradient-to-br from-duels-init to-duels-end ;
+  }
+
+  .bg-card-duelos-rightbar {
+    background: url("/assets/images/duels/bg-trivias-duelos-square.png");
+    @apply bg-center bg-cover text-sm leading-tight h-72;
+
+    & .title {
+    & span {
+      @apply text-gray-800 relative px-0.5;
+        z-index: 1;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: -10%;
+          left: 0;
+          width: 100%;
+          height: 110%;
+          z-index: -1;
+          transform: skewX(-8deg);
+          background: #ffeaa7;
+          border-radius: 5px;
+        }
+      }
+    }
+  }

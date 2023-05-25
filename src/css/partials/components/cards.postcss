@@ -1,0 +1,131 @@
+.card-news{
+    @apply shadow-lg !important;
+    --f7-card-expandable-border-radius:10px;
+
+    &.card-expandable{
+        height:20rem;
+
+        & .card-header{
+            @apply h-28 font-body font-normal text-base w-full rounded-none;
+            padding-right: calc(var(--f7-card-expandable-margin-horizontal) * 3);
+            height: 10rem;
+
+            & h4{
+                @apply inline-flex items-center mt-2 leading-5 font-display mb-2;
+                & span{
+                    @apply line-clamp-2;
+                }
+            }
+            & .card-text-preview{
+                @apply text-sm leading-5 line-clamp-2;
+            }
+        }
+        &.card-opening, &.card-opened{
+            & .card-header{
+                @apply h-auto mt-4;
+                padding-right: calc(var(--f7-card-expandable-margin-horizontal));
+
+                & h4{
+                    & span{
+                        @apply line-clamp-none leading-tight text-2xl;
+                    }
+                }
+
+                & .card-text-preview{
+                    @apply line-clamp-none italic pt-2 pb-4 border-b border-gray-100 dark:border-opacity-10;
+                }
+            }
+        }
+    }
+}
+
+.card-box{
+    @apply rounded shadow shadow-gray-400/20 bg-white dark:bg-palette-dark-tint dark:shadow-black/20 px-3 py-1 relative;
+  }
+.card-trivias-box{
+    @apply overflow-hidden relative;
+
+    &:after{
+        @apply absolute bottom-0 w-full h-2 left-0 animate-[gradient-move_5s_linear_infinite];
+        background: linear-gradient(to right, #11BCEE 0%, #9CCA3C 25%,#FCDA01 40%, #F58421 55%, #E2463E 65%, #9F4B9B 75%, #1DB7B3 85%, #11BCEE 100%);
+        background-size: 1000% 100%;
+        content:'';
+    }
+}
+
+  .card-lesson{
+    @apply relative flex flex-1 h-24 bg-white rounded shadow-md shadow-gray-300  lg:h-28 dark:bg-palette-dark-tint dark:shadow-gray-900/30 transition-all;
+    &:active, &.active {
+        @apply relative translate-y-0.5 lg:translate-y-0 transform shadow lg:shadow-md transition-all;
+      }
+  }
+
+  .card-lessons-group{
+    @apply inline-flex flex-col h-auto px-0 py-0 rounded shadow-md shadow-gray-300 lg:shadow-md dark:bg-palette-dark-tint dark:shadow-gray-900/30;
+
+    &:active, &.active {
+        @apply relative translate-y-0.5 transform shadow transition-all;
+      }
+  }
+
+  .card-form-group{
+      @apply px-5 py-4 bg-white rounded shadow-md shadow-gray-300/20 bg-opacity-80 dark:bg-opacity-60 dark:bg-palette-dark-tint dark:shadow-gray-900/30;
+
+      & h5{
+          @apply text-base uppercase font-display text-primary-50;
+      }
+      & .description{
+          @apply mb-3 text-sm leading-none opacity-80;
+      }
+
+  }
+
+  .card-achievement{
+    @apply block py-0 overflow-hidden rounded-lg bg-gradient-to-br from-amber-500 to-rose-500 relative shadow-[inset_0_-6px_0_0_rgba(0,0,0,.2)];
+    &:active, &.active {
+        @apply relative translate-y-0.5 shadow-[inset_0_-4px_0_0_rgba(0,0,0,.2)];
+      }
+  }
+
+.bg-card-civipuntos{
+  z-index: 2;
+  position: relative;
+
+  &:before{
+      content: '';
+      position: absolute;
+      background-color:#FFF3CC;
+      background-image: url('/assets/images/bg-streamers.png');
+      background-size: cover;
+      background-position: top center;
+      left:0;
+      right:0;
+      bottom:0;
+      top:0;
+      z-index: -1;
+  }
+
+  &:after{
+      @apply absolute inset-0 my-0 mx-auto;
+      content: '';
+      width: 90%;
+      transform: rotate(-7deg);
+      background: #FECA57;
+      border-radius: 3.53px;
+      z-index: -2;
+  }
+
+  &.no-borders{
+      &:after{
+          content:none;
+      }
+  }
+}
+
+.box-rango{
+    @apply rounded shadow-md shadow-indigo-700/40 bg-gradient-to-br from-purple-500 to-indigo-700 dark:shadow-gray-900/30 self-center flex items-center justify-center relative
+}
+
+.card-yellow-info{
+    @apply p-4 text-gray-600 border-2 border-yellow-100 bg-yellow-50 rounded leading-tight dark:bg-gray-600 dark:text-white dark:border-white dark:border-opacity-25;
+}

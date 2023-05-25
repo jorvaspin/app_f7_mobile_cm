@@ -1,0 +1,559 @@
+#sideRankingNivelLocal-mobile {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  .header-ranking-nivel-local{
+    background: url('https://res.cloudinary.com/admsys-storage/image/upload/f_auto,q_auto:best/v1594826896/smarteducation/masterbrain/civicamente-app/mobile/biblioteca/bg-cm-header-biblioteca.png'), #E9E9E9;
+    padding: 48px 0px 30px 0px;
+    color: white;
+    background-size: auto;
+    height: 25vh;
+    border-radius: 0px !important;
+    .titulos{
+      padding: 30px;
+    }
+  }
+
+  .cd-panel__container-mobile {
+      top: 55px !important;
+      background: white;
+  }
+
+  .scrol{
+    padding: 10px;
+    height: auto !important;
+    margin-top: -15px;
+    background: white;
+    border-radius: 25px;
+    margin-bottom: 60px;
+    .alumnoRanking {
+      position: relative;
+      padding: 15px 15px 15px 0px;
+      overflow: hidden;
+      width: 100%;
+      margin: 0;
+      .block {
+        font-size: 12px;
+        width: 100px;
+        text-align: center;
+        margin-left: 33px;
+      }
+      .listaTrivias{
+        padding: 8px 0px 8px 0px;
+        width: 100%;
+
+        .tituloTrivia{
+
+
+        }
+      }
+      &.active {
+        background: #FFEAA7;
+        border-radius:5px;
+        &:before {
+          content: 'Yo';
+          position: absolute;
+          top: 0;
+          right: 3px;
+
+          font-size: 11px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          text-align: center;
+          z-index: 3;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: -15px;
+          right: -20px;
+          width: 50px;
+          height: 30px;
+          transform: rotate(45deg);
+          background: #EB4D4B;
+          z-index: 2;
+        }
+      }
+      .posicion {
+        width: 10%;
+
+        font-size: 17px;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: center;
+
+      }
+      .avatar {
+        width: 15%;
+        padding-left: 3px;
+        img {
+          width: 100%
+        }
+      }
+      .nombre {
+        width: 50%;
+        font-size: 13px;
+        font-weight: 700;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: left;
+        line-height: 12px;
+        padding: 0 10px;
+        span{
+          position: inherit;
+          font-size: 9px;
+          padding: 3px 7px 2px 7px;
+          display: block;
+          width: 80px;
+          margin-top: 4px;
+        }
+      }
+      .puntaje {
+        width: 25%;
+        background-image: linear-gradient(135deg, #EDF0F6 0%, #C9D6E8 100%);
+        padding: 5px;
+        border-radius: 20px;
+
+        font-size: 10px;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: center;
+      }
+      .noranking {
+        padding: 0px 15px 0px 15px;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 500 !important;
+      }
+    }
+  }
+}
+
+
+
+#sideRankingNivelNacional-mobile {
+  display: block;
+  width: 100%;
+  margin-top: 0px;
+  background: white !important;
+  .header-ranking-nivel-nacional{
+    background: url('https://res.cloudinary.com/admsys-storage/image/upload/v1594828061/smarteducation/masterbrain/civicamente-app/mobile/biblioteca/bg-cm-tematicas-pendientes.png'), #E9E9E9;
+    padding: 25px 5px;
+    color: white;
+    background-size: auto;
+    height: 14em;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 0px !important;
+    .titulos{
+      padding: 15px 15px 10px 15px;
+
+      h2{
+        font-size: 22px;
+      }
+    }
+  }
+
+  .cd-panel__container-mobile {
+      top: 40px !important;
+      background: white;
+  }
+
+  .scrol{
+    padding: 10px;
+    height: auto !important;
+    margin-top: -35px;
+    background: white;
+    border-radius: 25px;
+    .alumnoRanking {
+      position: relative;
+      padding: 15px 15px 15px 0px;
+      overflow: hidden;
+      width: 100%;
+      margin: 0;
+      .block {
+        font-size: 12px;
+        width: 100px;
+        text-align: center;
+        margin-left: 33px;
+      }
+      .listaTrivias{
+        padding: 8px 0px 8px 0px;
+        width: 100%;
+
+        .tituloTrivia{
+
+
+        }
+      }
+      &.active {
+        background: #FFEAA7;
+        border-radius:5px;
+        &:before {
+          content: 'Yo';
+          position: absolute;
+          top: 0;
+          right: 3px;
+
+          font-size: 11px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          text-align: center;
+          z-index: 3;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: -15px;
+          right: -20px;
+          width: 50px;
+          height: 30px;
+          transform: rotate(45deg);
+          background: #EB4D4B;
+          z-index: 2;
+        }
+      }
+      .posicion {
+        width: 10%;
+
+        font-size: 17px;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: center;
+
+      }
+      .avatar {
+        width: 15%;
+        padding-left: 3px;
+        img {
+          width: 100%;
+        }
+      }
+      .nombre {
+        width: 50%;
+        font-size: 13px;
+        font-weight: 700;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: left;
+        line-height: 12px;
+        padding: 0 10px;
+        span{
+          position: inherit;
+          font-size: 9px;
+          padding: 3px 7px 2px 7px;
+          display: block;
+          width: 80px;
+          margin-top: 4px;
+        }
+      }
+      .puntaje {
+        width: 25%;
+        background-image: linear-gradient(135deg, #EDF0F6 0%, #C9D6E8 100%);
+        padding: 5px;
+        border-radius: 20px;
+
+        font-size: 10px;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: center;
+      }
+      .noranking {
+        padding: 0px 15px 0px 15px;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 500 !important;
+      }
+    }
+  }
+}
+
+
+#trivias-finished {
+  display: block;
+  width: 100%;
+  margin-top: 0px;
+  background: white !important;
+  .header-ranking-nivel-nacional{
+    background: url('https://res.cloudinary.com/admsys-storage/image/upload/v1594828061/smarteducation/masterbrain/civicamente-app/mobile/biblioteca/bg-cm-tematicas-pendientes.png'), #E9E9E9;
+    padding: 25px 5px;
+    color: white;
+    background-size: auto;
+    height: 14em;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 0px !important;
+    .titulos{
+      padding: 15px 15px 10px 15px;
+
+      h2{
+        font-size: 22px;
+      }
+    }
+  }
+
+  .cd-panel__container-mobile {
+      top: 40px !important;
+      background: white;
+  }
+
+  .scrol{
+    padding: 10px;
+    height: auto !important;
+    margin-top: -35px;
+    background: white;
+    border-radius: 25px;
+    .alumnoRanking {
+      position: relative;
+      padding: 15px 15px 15px 0px;
+      overflow: hidden;
+      width: 100%;
+      margin: 0;
+      .block {
+        font-size: 12px;
+        width: 100px;
+        text-align: center;
+        margin-left: 33px;
+      }
+      .listaTrivias{
+        padding: 8px 0px 8px 0px;
+        width: 100%;
+
+        .tituloTrivia{
+
+
+        }
+      }
+      &.active {
+        background: #FFEAA7;
+        border-radius:5px;
+        &:before {
+          content: 'Yo';
+          position: absolute;
+          top: 0;
+          right: 3px;
+
+          font-size: 11px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          text-align: center;
+          z-index: 3;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: -15px;
+          right: -20px;
+          width: 50px;
+          height: 30px;
+          transform: rotate(45deg);
+          background: #EB4D4B;
+          z-index: 2;
+        }
+      }
+      .posicion {
+        width: 10%;
+
+        font-size: 17px;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: center;
+
+      }
+      .avatar {
+        width: 15%;
+        padding-left: 3px;
+        img {
+          width: 100%;
+        }
+      }
+      .nombre {
+        width: 50%;
+        font-size: 13px;
+        font-weight: 700;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: left;
+        line-height: 12px;
+        padding: 0 10px;
+        span{
+          position: inherit;
+          font-size: 9px;
+          padding: 3px 7px 2px 7px;
+          display: block;
+          width: 80px;
+          margin-top: 4px;
+        }
+      }
+      .puntaje {
+        width: 25%;
+        background-image: linear-gradient(135deg, #EDF0F6 0%, #C9D6E8 100%);
+        padding: 5px;
+        border-radius: 20px;
+
+        font-size: 10px;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: center;
+      }
+      .noranking {
+        padding: 0px 15px 0px 15px;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 500 !important;
+      }
+    }
+  }
+}
+
+
+
+#sideRankingTorneoNacional-mobile {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  .header-ranking-nivel-local{
+    background: url('https://res.cloudinary.com/admsys-storage/image/upload/v1596055458/smarteducation/masterbrain/civicamente-v2/biblioteca/bg-grupo-torneo-civico.png'), #E9E9E9;
+    padding: 40px 0px 10px 0px;
+    color: white;
+    background-size: auto;
+    height: 25vh;
+    border-radius: 0px !important;
+    .titulos{
+      padding: 30px;
+    }
+  }
+
+  .cd-panel__container-mobile {
+      top: 55px !important;
+      background: white;
+  }
+
+
+  .scrol{
+    padding: 10px;
+    height: auto !important;
+    margin-top: -15px;
+    background: white;
+    border-radius: 25px;
+    margin-bottom: 60px;
+    .alumnoRanking {
+      position: relative;
+      padding: 15px 15px 15px 0px;
+      overflow: hidden;
+      width: 100%;
+      margin: 0;
+      .block {
+        font-size: 12px;
+        width: 100px;
+        text-align: center;
+        margin-left: 33px;
+      }
+      .listaTrivias{
+        padding: 8px 0px 8px 0px;
+        width: 100%;
+
+        .tituloTrivia{
+
+
+        }
+      }
+      &.active {
+        background: #FFEAA7;
+        border-radius:5px;
+        &:before {
+          content: 'Yo';
+          position: absolute;
+          top: 0;
+          right: 3px;
+
+          font-size: 11px;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          text-align: center;
+          z-index: 3;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: -15px;
+          right: -20px;
+          width: 50px;
+          height: 30px;
+          transform: rotate(45deg);
+          background: #EB4D4B;
+          z-index: 2;
+        }
+      }
+      .posicion {
+        width: 10%;
+
+        font-size: 17px;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: center;
+
+      }
+      .avatar {
+        width: 15%;
+        padding-left: 3px;
+        img {
+          width: 100%;
+        }
+      }
+      .nombre {
+        width: 50%;
+        font-size: 13px;
+        font-weight: 700;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: left;
+        line-height: 12px;
+        padding: 0 10px;
+        span{
+          position: inherit;
+          font-size: 9px;
+          padding: 3px 7px 2px 7px;
+          display: block;
+          width: 80px;
+          margin-top: 4px;
+        }
+      }
+      .puntaje {
+        width: 25%;
+        background-image: linear-gradient(135deg, #EDF0F6 0%, #C9D6E8 100%);
+        padding: 5px;
+        border-radius: 20px;
+
+        font-size: 10px;
+        color: #32323F;
+        letter-spacing: 0;
+        text-align: center;
+      }
+      .noranking {
+        padding: 0px 15px 0px 15px;
+        text-align: left;
+        font-size: 13px;
+        font-weight: 500 !important;
+      }
+    }
+  }
+}
+
+
+
+#rankingMobile {
+
+
+    .page-content{
+      margin: 0px;
+      padding: 0px;
+    }
+}
+
+.ios .infinite-scroll-preloader {
+    margin-top: 0px !important;
+    margin-bottom: 58px !important;
+}

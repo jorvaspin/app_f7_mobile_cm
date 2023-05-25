@@ -1,0 +1,34 @@
+{
+  "cwd": "/Users/adiazm/Sites/cm-estudiantes-f7native-v6",
+  "type": [
+    "web",
+    "pwa",
+    "cordova"
+  ],
+  "name": "civicamente",
+  "pkg": "cl.civicamente.app",
+  "framework": "vue",
+  "template": "tabs",
+  "cssPreProcessor": "scss",
+  "bundler": "vite",
+  "cordova": {
+    "folder": "cordova",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "plugins": [
+      "cordova-plugin-statusbar",
+      "cordova-plugin-keyboard",
+      "cordova-plugin-splashscreen"
+    ]
+  },
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}

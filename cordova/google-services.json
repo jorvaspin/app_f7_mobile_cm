@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "106830110355",
+    "project_id": "cm-message-app",
+    "storage_bucket": "cm-message-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106830110355:android:f417d0493f3ca23b527766",
+        "android_client_info": {
+          "package_name": "cl.civicamente.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106830110355-nlca9dpb1gkakb20ls99nefj0cdmd6ek.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDixCY-jLOhoCYIF_HEzTBVfEn_cxUcqh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106830110355-nlca9dpb1gkakb20ls99nefj0cdmd6ek.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "106830110355-foqpd68h2ro00sd523vork0r39ll9ai0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "cl.civicamente.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

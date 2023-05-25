@@ -1,0 +1,402 @@
+.fichaTematica {
+    // position: fixed;
+    // overflow: auto;
+    // z-index: 999999;
+
+    .page-content {
+        padding-bottom: 0;
+        // height: auto;
+    }
+
+    .contenedorCabecera {
+        position: relative;
+        height: 15em;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-image: linear-gradient(180deg, rgba(33, 33, 33, 0.00) 0%, #212121 100%);
+        }
+
+        div.titulo {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+
+            span.dificultad {
+                display: inline-block;
+                margin-bottom: 10px;
+                background-image: linear-gradient(134deg, #FF0467 0%, #FC7437 100%);
+                border-radius: 12.5px;
+                padding: 5px 10px;
+
+                font-size: 14px;
+                line-height: 9px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                text-align: center;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.20);
+                position: absolute;
+                top: -50px;
+                right: 0;
+            }
+
+            h3 {
+                width: 100%;
+
+                font-size: 35px;
+                line-height: 40px;
+                color: #FFFFFF;
+                letter-spacing: 0;
+                text-align: left;
+                text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+                margin-bottom: 15px;
+            }
+
+            div.tiempo {
+                padding: 5px 10px;
+                background: rgba(50, 50, 63, 0.4);
+                border-radius: 5px;
+                font-size: 13px;
+                line-height: 13px;
+                color: #EEF3F7;
+                text-align: left;
+
+                i {
+                    margin-right: 3px;
+                }
+
+                svg {
+                    margin-right: 3px;
+                }
+            }
+
+            div.likes {
+                cursor: pointer;
+
+                font-size: 13px;
+                color: #EEF3F7;
+                letter-spacing: 0.3px;
+                line-height: 13px;
+                margin-left: 25px;
+
+                i {
+                    font-size: 18px;
+                    color: #FF0467;
+                    letter-spacing: 0.27px;
+                    margin-right: 5px;
+                }
+
+                svg {
+                    font-size: 18px;
+                    color: #FF0467;
+                    letter-spacing: 0.27px;
+                    margin-right: 5px;
+                }
+            }
+
+            div.participantes {
+                cursor: pointer;
+
+                font-size: 13px;
+                color: #EEF3F7;
+                letter-spacing: 0.3px;
+                line-height: 13px;
+                margin-left: 14%;
+                position: absolute;
+                bottom: 10px;
+
+                i {
+                    font-size: 18px;
+                    color: #FFEAA7;
+                    letter-spacing: 0.27px;
+                    margin-right: 5px;
+                }
+
+                svg {
+                    font-size: 18px;
+                    color: #FFEAA7;
+                    letter-spacing: 0.27px;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        div.estadosTematica {
+            position: absolute;
+            bottom: 5%;
+            right: 0;
+            height: 60px;
+            width: 60px;
+            background: #32323F;
+
+            &:hover {
+                cursor: pointer
+            }
+
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 17px;
+                line-height: 17px;
+                color: white;
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 17px;
+                line-height: 17px;
+                color: white;
+            }
+        }
+    }
+
+    div.lateralTematica {
+        position: relative;
+        bottom: 0;
+        background: rgba(255, 234, 167, 0.50);
+        box-shadow: 0 0 10px 0 #C3CDD1;
+        height: 80vh;
+        padding: 20px 0;
+    }
+
+    div.elementoBloqueado {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 105%;
+        width: 105%;
+        background: rgba(227, 233, 236, 0.90);
+
+        div.mensaje {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+
+            i {
+                display: block;
+                font-size: 44px;
+                color: #4A4A4A;
+                margin-bottom: 15px
+            }
+
+            svg {
+                display: block;
+                font-size: 44px;
+                color: #4A4A4A;
+                margin-bottom: 15px
+            }
+
+            span {
+                display: block;
+
+                font-size: 16px;
+                color: #4A4A4A;
+                text-align: center;
+            }
+        }
+
+        button {
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    // div.indice {
+    //   height: 80vh;
+    //   margin-top: -10vh;
+    //   padding: 20px;
+    //   background: #32323F;
+    //   border-radius: 5px 0 0 0;
+    //   h3 {
+    //
+    //     font-size: 19px;
+    //     color: #FFEAA7;
+    //     text-align: left;
+    //   }
+    //   div.elementoIndice {
+    //     background: rgba(238, 243, 247, 0.1);
+    //     border-radius: 2px;
+    //     padding: 10px;
+    //     span {
+    //
+    //       font-size: 14px;
+    //       color: white;
+    //       text-align: left;
+    //       transition: .5s all;
+    //     }
+    //     button {
+    //       display: block;
+    //       padding: 5px 0;
+    //       width: 85px;
+    //     }
+    //     &.completado {
+    //       span {
+    //         opacity: 0.5;
+    //
+    //         font-size: 14px;
+    //         line-height: 14px;
+    //         color: #EEF3F7;
+    //         text-align: left;
+    //       }
+    //       div {
+    //         background-image: linear-gradient(135deg, #43E695 0%, #3BB2B8 100%);
+    //         box-shadow: 0 2px 0 0 #2C967C;
+    //         border-radius: 50%;
+    //         padding: 5px 5px 0 5px;
+    //         i {
+    //           font-size: 20px;
+    //           color: white;
+    //         }
+    //       }
+    //     }
+    //     &:hover {
+    //       span {
+    //         color: #FECA57;
+    //       }
+    //     }
+    //   }
+    // }
+    div.js-cd-panel-sideEstadosTematica {
+        position: absolute;
+        left: unset;
+        right: 0;
+        width: 30%;
+        height: 50%;
+
+        &:after {
+            background-color: transparent;
+        }
+
+        &>div.cd-panel#sideEstadosTematica {
+            position: absolute;
+            left: unset;
+            right: 0;
+
+            &>div.cd-panel__container {
+                max-width: 250px;
+                top: 20vh;
+                height: fit-content;
+
+                div.cd-panel__content {
+                    height: fit-content;
+
+                    &>a.cerrarEstados {
+                        position: absolute;
+                        top: 2px;
+                        right: 2px;
+                        height: 26px;
+                        width: 26px;
+
+                        background: #4D4F7F;
+                        border-radius: 50%;
+                        color: white;
+                        font-size: 19px;
+                        text-align: center;
+                        padding: 0;
+                        margin: 0;
+                        text-transform: uppercase;
+                        opacity: 1;
+                        transition: .5s all;
+                        text-shadow: unset;
+                        z-index: 2;
+
+                        &:hover {
+                            text-decoration: unset;
+                            opacity: .8;
+                        }
+                    }
+
+                    div.indice {
+                        // height: 80vh;
+                        // margin-top: -10vh;
+                        padding: 20px;
+                        background: #32323F;
+                        border-radius: 5px 0 0 0;
+
+                        h3 {
+
+                            font-size: 19px;
+                            color: #FFEAA7;
+                            text-align: left;
+                        }
+
+                        div.elementoIndice {
+                            background: rgba(238, 243, 247, 0.1);
+                            border-radius: 2px;
+                            padding: 10px;
+
+                            span {
+
+                                font-size: 14px;
+                                color: white;
+                                text-align: left;
+                                transition: .5s all;
+                            }
+
+                            button {
+                                display: block;
+                                padding: 5px 0;
+                                width: 85px;
+                            }
+
+                            &.completado {
+                                span {
+                                    opacity: 0.5;
+
+                                    font-size: 14px;
+                                    line-height: 14px;
+                                    color: #EEF3F7;
+                                    text-align: left;
+                                }
+
+                                div {
+                                    background-image: linear-gradient(135deg, #43E695 0%, #3BB2B8 100%);
+                                    box-shadow: 0 2px 0 0 #2C967C;
+                                    border-radius: 50%;
+                                    padding: 5px 5px 0 5px;
+
+                                    i {
+                                        font-size: 20px;
+                                        color: white;
+                                    }
+
+                                    svg {
+                                        font-size: 20px;
+                                        color: white;
+                                    }
+                                }
+                            }
+
+                            &:hover {
+                                span {
+                                    color: #FECA57;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

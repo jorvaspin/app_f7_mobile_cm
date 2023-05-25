@@ -1,0 +1,18 @@
+.cm-tables{
+    @apply min-w-full;
+  }
+  .cm-tables thead{
+    @apply bg-gray-900;
+  }
+  .cm-tables thead th{
+    @apply px-3 py-3 text-left text-xs font-medium text-gray-100 uppercase tracking-wider;
+  }
+  .cm-tables tbody{
+    @apply bg-white divide-y divide-gray-200;
+  }
+  .cm-tables tbody tr{
+    @apply even:bg-white odd:bg-gray-50;
+  }
+  .cm-tables tbody tr td{
+    @apply px-3 py-4 text-sm text-gray-800;
+  }

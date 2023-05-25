@@ -1,0 +1,39 @@
+.pagination {
+  @apply flex list-none pl-0 rounded;
+}
+
+.pagination .page-item .page-link {
+  @apply relative block px-4 py-1.5 no-underline bg-white border border-solid border-gray-300 border-l-0 focus:ring-2 focus:ring-offset-blue-100 focus:ring-opacity-40 font-display;
+}
+
+.pagination .page-item .page-link:hover {
+  @apply z-10 text-gray-700 no-underline bg-blue-50;
+}
+
+.pagination .page-item .page-link:focus {
+  @apply z-20;
+}
+
+.pagination .page-item:first-child .page-link {
+  @apply ml-0 rounded-l-sm border-l;
+}
+
+.pagination .page-item:last-child .page-link {
+  @apply ml-0 rounded-r-sm;
+}
+
+.pagination .page-item.active .page-link {
+  @apply z-20 text-white bg-gradient-to-b from-blue-500 to-blue-700 border border-blue-600 shadow-inner;
+}
+
+.pagination .page-item.disabled .page-link {
+  @apply z-20 text-gray-500 bg-blue-300 border border-gray-300 opacity-50 pointer-events-none;
+}
+
+/* .pagination-lg {
+  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $pagination-border-radius-lg);
+}
+
+.pagination-sm {
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $pagination-border-radius-sm);
+} */

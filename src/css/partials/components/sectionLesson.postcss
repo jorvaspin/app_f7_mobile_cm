@@ -1,0 +1,17 @@
+.section-lesson{
+    & .lesson-header{
+        @apply flex items-center justify-between gap-2 mb-1;
+        & .lesson-title{
+            @apply text-xl md:text-2xl font-bold leading-none;
+        }
+        & .lesson-link{
+            @apply inline-flex justify-end bg-pages w-20;
+        }
+    }
+    & .lesson-description{
+        @apply mt-0 mb-6 leading-tight text-base md:text-lg text-titles dark:text-gray-100;
+    }
+    & .view-more{
+        @apply gap-1 text-sm font-extrabold tracking-tight text-blue-600 uppercase dark:text-amber-400;
+    }
+}

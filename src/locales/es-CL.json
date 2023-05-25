@@ -1,0 +1,67 @@
+{
+  "dashboard": {
+    "page_title": "Hoy",
+    "tab_title": "Hoy",
+    "greeting": "Hola {username} !",
+    "user_messages": {
+      "has_participated": "Tu última participación fue {last_game}",
+      "has_not_participated": "¡Recuerda participar en Cívicamente!",
+      "has_taken_lessons": "Aún no has contestado trivias de temáticas.. que estás esperando? | Has completado una clase de tu biblioteca este mes. | Has completado {count} clases de tu biblioteca este mes."
+    }
+  },
+  "library": {
+    "page_title": "Mi Biblioteca",
+    "tab_title": "Biblioteca",
+    "page_loading_message": "Espera un momento, estamos actualizando tu contenido...",
+    "main": {
+      "welcome": {
+        "title": "Descubre lo nuevo de tu",
+        "title_color": "Biblioteca",
+        "subtitle": "Aquí encuentras las clases que debes desarrollar y contenido adicional para aprender por tu cuenta."
+      }
+    },
+    "lessons": {},
+    "lesson": "sin clases | una clase | {count} clases"
+  },
+  "stats": {
+    "page_title": "Estadísticas",
+    "tab_title": "Estadísticas",
+    "page_loading_message": "Estamos obteniendo tus estadísticas..."
+  },
+  "profile": {
+    "page_title": "Perfil",
+    "tab_title": "Perfil",
+    "main": {
+      "list_menu": {
+        "user_data": {
+          "description": "Edita tus datos personales y avatar."
+        },
+        "my_civipoints": {
+          "title": "Mis civipuntos",
+          "description": "Accede a tu historial de transacciones."
+        },
+        "my_inventary": {
+          "title": "Mi inventario",
+          "description": "Accede a todos tus artículos canjeados."
+        },
+        "my_achievements": {
+          "title": "Mis logros y recompensas",
+          "description": "Vuelve a ver tus logros y recompensas desbloqueadas."
+        },
+        "my_duels": {
+          "title": "Mis duelos activos",
+          "description": "Revisa tus duelos iniciados que aún no has finalizado."
+        },
+        "product_catalog": {
+          "title": "Catálogo de productos",
+          "description": "Ven de compras y desbloquea temas, animaciones especiales, avatares, comodines y más."
+        },
+        "general_configuration": {
+          "title": "Configuración general",
+          "description": "Configura la música de fondo, idioma, modo oscuro, temas, etc."
+        }
+      },
+      "logout_btn": "Cerrar sesión"
+    }
+  }
+}

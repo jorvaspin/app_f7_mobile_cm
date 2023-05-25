@@ -1,0 +1,67 @@
+{
+    "dashboard": {
+        "page_title": "Today",
+        "tab_title": "Today",
+        "greeting": "Hi {username} !",
+        "user_messages": {
+            "has_participated": "Your last participation was {last_game}",
+            "has_not_participated": "Remember to participate in Cívicamente!",
+            "has_taken_lessons": "You haven't answered thematic trivia yet... what are you waiting for? | You have completed a class from your library this month. | You have completed {count} classes from your library this month."
+        }
+    },
+    "library": {
+        "page_title": "My Library",
+        "tab_title": "Library",
+        "page_loading_message": "Espera un momento, estamos actualizando tu contenido...",
+        "main": {
+            "welcome": {
+                "title": "Discover what's new in your",
+                "title_color": "Library",
+                "subtitle": "Here you find the classes that you must develop and additional content to learn on your own."
+            }
+        },
+        "lessons": {},
+        "lesson": "without lessons | a lesson | {count} lessons"
+    },
+    "stats": {
+        "page_title": "Stats",
+        "tab_title": "Stats",
+        "page_loading_message": "Espera un momento, estamos obteniendo tus estadísticas..."
+    },
+    "profile": {
+        "page_title": "My Profile",
+        "tab_title": "Profile",
+        "main": {
+            "list_menu": {
+                "user_data": {
+                    "description": "Edit your personal data and avatar."
+                },
+                "my_civipoints": {
+                    "title": "My civipoints",
+                    "description": "Access your transaction history."
+                },
+                "my_inventary": {
+                    "title": "My inventary",
+                    "description": "Access all your purchased items."
+                },
+                "my_achievements": {
+                    "title": "My achievements and rewards",
+                    "description": "Go back to see your unlocked achievements and rewards."
+                },
+                "my_duels": {
+                    "title": "My active duels",
+                    "description": "Review your started duels that you haven't finished yet."
+                },
+                "product_catalog": {
+                    "title": "Product catalog",
+                    "description": "Come shopping and unlock themes, special animations, avatars, jokers and more."
+                },
+                "general_configuration": {
+                    "title": "General configuration",
+                    "description": "Set background music, language, dark mode, themes, etc."
+                }
+            },
+            "logout_btn": "Logout"
+        }
+    }
+}

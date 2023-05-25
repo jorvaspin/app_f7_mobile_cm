@@ -1,0 +1,106 @@
+.cardBibliotecaTematicas {
+    border-radius: 0px !important;
+    position: relative;
+    margin: 0;
+    box-shadow: none;
+    background-image: linear-gradient(135deg, #EDF0F6 0%, #C9D6E8 100%);
+    border-top: 1px solid rgba(#8290A3, .1);
+
+    // &>* {
+    //     z-index: 100;
+    // }
+
+    .descripcion {
+        padding: 2rem 0 3rem !important;
+    }
+
+    .tematicas-swiper {
+        margin: 0 0 2rem 0;
+        min-height: 22rem;
+
+        & .swiper-pagination {
+            bottom: 0;
+
+            & .swiper-pagination-bullet {
+                background: rgba(var(--color-dark), .7);
+                transition: transform .2s ease-in-out;
+            }
+
+            & .swiper-pagination-bullet-active {
+                background: var(--bg-gradient-primary);
+                transform: scale(1.5);
+                transition: transform ease-in-out .3;
+            }
+        }
+
+        .swiper-button-prev{
+          background-image: url('https://res.cloudinary.com/admsys-storage/image/upload/smarteducation/masterbrain/civicamente-v2/icons/arrow-left.svg');
+          width: 45px;
+          background-repeat: no-repeat;
+          height: 70px;
+          top: 30%;
+          left: 10px;
+          background-size: contain;
+          background-position: center;
+          display: flex;
+          z-index: 90;
+          position: absolute;
+          &:after{
+            content: none;
+
+          }
+        }
+        .swiper-button-next{
+          background-image: url('https://res.cloudinary.com/admsys-storage/image/upload/smarteducation/masterbrain/civicamente-v2/icons/arrow-right.svg');
+          width: 40px;
+          background-repeat: no-repeat;
+          height: 70px;
+          top: 30%;
+          right: -5px;
+          background-size: 2.5rem;
+          display: flex;
+          z-index: 90;
+          position: absolute;
+          &:after{
+            content: none;
+
+          }
+        }
+
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin: 0;
+        padding: 0px 10px 10px 10px;
+    }
+
+    // &.cardBibliotecaTematicasMes {
+    //     background-image: linear-gradient(225deg, #EDF0F6 0%, #C9D6E8 100%);
+    // }
+
+    &.cardBibliotecaTematicasPendientes {
+        background-image: linear-gradient(135deg, #EDF0F6 0%, #C9D6E8 100%);
+    }
+
+    &.cardBibliotecaTematicasFinalizadas {
+        min-height: 45rem;
+
+        .tematicas-swiper {
+            margin: 0 0 1rem 0;
+            min-height: 13rem;
+        }
+    }
+}
+
+
+.swal-icon--custom {
+    // width: 40% !important;
+    max-width: 100%;
+
+    img{
+        margin: 0 auto;
+    }
+}

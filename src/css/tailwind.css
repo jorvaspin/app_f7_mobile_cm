@@ -1,0 +1,34 @@
+@import "tailwindcss/base";
+@import "./base";
+@import "https://use.typekit.net/zzi8vpi.css";
+@import "./partials/fonts/merriweather";
+@import "./partials/fonts/burbank";
+@import './variables';
+
+@import "tailwindcss/components";
+/* COMPONENTES */
+/* @import "vue-snotify/styles/material"; */
+@import './partials/perfil.postcss';
+@import './partials/biblioteca.postcss';
+@import './partials/transitions.postcss';
+@import './partials/custom-f7.less';
+@import './partials/components/alerts.postcss';
+@import './partials/components/buttons.postcss';
+@import './partials/components/cards.postcss';
+@import './partials/components/content-block.postcss';
+@import './partials/components/dialog.postcss';
+@import './partials/components/duels.postcss';
+@import './partials/components/general.postcss';
+@import './partials/components/header';
+@import './partials/components/lessonsMobileList.postcss';
+@import './partials/components/list.less';
+@import './partials/components/menuBottom.postcss';
+@import './partials/components/menuTop.postcss';
+@import './partials/components/navbars.less';
+@import './partials/components/pages.less';
+@import './partials/components/pagination';
+@import './partials/components/sectionLesson.postcss';
+@import './partials/components/tables';
+@import './partials/components/text-gradients';
+
+@import "tailwindcss/utilities";

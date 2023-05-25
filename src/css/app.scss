@@ -1,0 +1,7 @@
+@import './sass/mainWeb.scss';
+@import './sass/mainMobile.scss';
+@import 'vue-loading-overlay/dist/vue-loading.css';
+
+.device-cordova.device-ios {
+  height: 100vh;
+}

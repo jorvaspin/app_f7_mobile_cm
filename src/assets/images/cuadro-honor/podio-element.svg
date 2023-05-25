@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="322px" height="120px" viewBox="0 0 322 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>podium element</title>
+    <defs>
+        <polygon id="path-1" points="0.0009 0.2173 321.917 0.2173 321.917 34.9993 0.0009 34.9993"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="podium-new-web" transform="translate(-189.000000, -222.000000)">
+            <g id="ganadores" transform="translate(189.000000, 74.000000)">
+                <g id="podium-element" transform="translate(0.000000, 148.000000)">
+                    <polygon id="Fill-1" fill="#FFFFFF" points="109.8852 38.5406 106.6102 45.4386 301.7742 45.4386 279.6582 25.7396 220.3712 25.7396 220.3712 38.5406"></polygon>
+                    <polygon id="Fill-2" fill="#FFFFFF" points="86.9112 -0.0003 73.0572 13.6817 220.3712 13.6817 211.9352 -0.0003"></polygon>
+                    <polygon id="Fill-3" fill="#FFFFFF" points="262.7407 71.7867 106.6097 71.7867 106.6097 63.3997 73.0567 63.3997 73.0567 55.9097 43.0907 55.9097 19.8837 81.2397 268.9867 81.2397"></polygon>
+                    <g id="Group-12" transform="translate(0.000000, 84.085000)">
+                        <g id="Group-8" transform="translate(14.000000, 9.000000)" fill="#EFCFB8">
+                            <polygon id="Fill-4" points="0.8012 18.6568 5.8832 12.2628 5.8832 16.1788 254.9872 16.1788 254.9872 12.2628 258.6522 18.6568"></polygon>
+                            <polygon id="Fill-6" points="287.7739 0.1284 287.7739 5.0484 254.9869 5.0484 254.9869 7.5254 293.7429 7.5254"></polygon>
+                        </g>
+                        <g id="Group-11">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-10"></g>
+                            <polygon id="Fill-9" fill-opacity="0.3" fill="#EFCFB8" mask="url(#mask-2)" points="301.7739 0.2173 301.7739 14.0483 270.6239 14.0483 268.9869 14.0483 268.9869 23.8683 268.9869 25.1793 19.8829 25.1793 19.8829 11.3483 0.0009 34.9993 283.3239 34.9993 276.5769 23.8683 321.9179 23.8683"></polygon>
+                        </g>
+                    </g>
+                    <polygon id="Fill-13" fill="#EFCFB8" points="106.5991 65.0269 106.5991 71.7869 262.7301 71.7869 264.3671 74.2639 102.8201 74.2639"></polygon>
+                    <polygon id="Fill-14" fill="#EFCFB8" points="73.0571 57.9586 73.0571 63.3996 106.6101 63.3996 106.6101 65.8776 67.6731 65.8776"></polygon>
+                    <polygon id="Fill-15" fill="#EFCFB8" points="220.3784 32.4517 220.3784 38.5407 109.8924 38.5407 108.7154 41.0177 224.7524 41.0177"></polygon>
+                    <polygon id="Fill-16" fill="#F7E6DB" points="19.8833 81.2398 19.8833 109.2638 268.9873 109.2638 268.9873 98.1338 268.9873 81.2398"></polygon>
+                    <polygon id="Fill-17" fill="#F7E6DB" points="106.6098 63.4 106.6098 45.439 109.8848 38.541 220.3718 38.541 220.3718 25.74 220.3718 13.681 73.0568 13.681 73.0568 55.91 73.0568 63.4"></polygon>
+                    <polygon id="Fill-18" fill="#F7E6DB" points="106.6098 45.439 106.6098 63.4 106.6098 71.787 262.7408 71.787 268.9868 81.24 268.9868 98.133 301.7738 98.133 301.7738 45.439"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,56 @@
+// Variables
+@import '../variables';
+
+//mobile
+@import './mobile/style_mobile';
+
+//MENUS
+@import './mobile/partials/appbar';
+//css home
+@import './mobile/home';
+
+//css perfil
+@import './mobile/perfil';
+
+//css biblioteca
+@import './mobile/biblioteca';
+
+//css fichaTematica
+// @import './mobile/fichaTematica';
+
+//css biblioteca
+@import './mobile/estadisticas';
+
+//css trivia general
+@import './mobile/triviaGeneral.postcss';
+
+//css quiz tof general
+@import './mobile/quizTofGeneral.postcss';
+
+//css trivia duelos
+@import './mobile/triviaDuelos';
+
+//css partials
+@import './mobile/partials';
+
+//css ranking curso y nacional
+@import './mobile/ranking';
+
+//css grupos tematicas
+@import './mobile/bibliotecagruposTematicas';
+
+//css grupos completadas
+@import './mobile/bibliotecaTematicasCompletadas';
+
+//css grupos completadas
+@import './mobile/pageTematicasKanban';
+
+//MODALS
+// @import './mobile/modals';
+
+//HELPERS
+@import './mobile/partials/helpers';
+
+//ELEMENTS & PARTIALS
+@import './mobile/partials/cardTematicas';
+@import './mobile/partials/fichaTematica';
