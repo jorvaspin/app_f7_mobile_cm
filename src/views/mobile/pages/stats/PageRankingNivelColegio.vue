@@ -65,7 +65,6 @@ export default defineComponent({
                 return;
             }
             self.getRankingNivelColegio(true)
-            console.log("paso abjo de get grupo");
             self.allowInfinite = true;
         }, 1000);
      },
